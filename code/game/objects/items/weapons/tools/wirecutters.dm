@@ -39,13 +39,12 @@
 	degradation = 0.7
 	max_upgrades = 4
 
-/obj/item/weapon/tool/wirecutters/pliers //hybrid of wirecutters, wrench and cautery
+/obj/item/weapon/tool/wirecutters/pliers
 	name = "pliers"
-	desc = "A multitool from the world of maintenance. Useful for pinching, clamping, and occasional bolt turning."
+	desc = "Useful for pinching, clamping and occasional bolt turning."
 	icon_state = "pliers"
 	edge = FALSE
-	sharp = FALSE
-	tool_qualities = list(QUALITY_WIRE_CUTTING = 10, QUALITY_CLAMPING = 20, QUALITY_BOLT_TURNING = 15, QUALITY_BONE_SETTING = 20)
+	tool_qualities = list(QUALITY_WIRE_CUTTING = 25, QUALITY_CLAMPING = 20, QUALITY_BOLT_TURNING = 15, QUALITY_BONE_SETTING = 15)
 
 
 /obj/item/weapon/tool/wirecutters/attack(mob/living/carbon/C as mob, mob/user as mob)

@@ -971,8 +971,9 @@
 		/obj/item/device/assembly/igniter = 3,
 		/obj/item/device/assembly/signaler = 6,
 		/obj/item/weapon/tool/wirecutters = 1,
-		/obj/item/weapon/tool/wirecutters/pliers = 1,
+		/obj/item/weapon/tool/wirecutters/pliers = 1
 		/obj/item/weapon/cartridge/signal = 4)
+	)
 	contraband = list(/obj/item/device/lighting/toggleable/flashlight = 5,
 						/obj/item/device/assembly/timer = 2)
 	product_ads = "Only the finest!;Have some tools.;The most robust equipment.;The finest gear in space!"
@@ -1495,9 +1496,9 @@
 	icon_state = "tool"
 	icon_deny = "tool-deny"
 	products = list(/obj/item/stack/cable_coil/random = 10,/obj/item/weapon/tool/crowbar = 5,/obj/item/weapon/tool/weldingtool = 5,/obj/item/weapon/tool/wirecutters = 3, /obj/item/weapon/tool/wirecutters/pliers = 3,
-					/obj/item/weapon/tool/wrench = 5,/obj/item/weapon/tool/hammer = 5,/obj/item/device/scanner/gas = 5,/obj/item/device/t_scanner = 5, /obj/item/weapon/tool/screwdriver = 5, /obj/item/clothing/gloves/insulated/cheap  = 2, /obj/item/clothing/gloves/insulated = 1,
+					/obj/item/weapon/tool/wrench = 5,/obj/item/device/scanner/gas = 5,/obj/item/device/t_scanner = 5, /obj/item/weapon/tool/screwdriver = 5, /obj/item/clothing/gloves/insulated/cheap  = 2, /obj/item/clothing/gloves/insulated = 1,
 					/obj/item/weapon/storage/pouch/engineering_tools = 2, /obj/item/weapon/storage/pouch/engineering_supply = 2)
-	prices = list(/obj/item/weapon/tool/hammer = 30,/obj/item/stack/cable_coil/random = 100,/obj/item/weapon/tool/crowbar = 30,/obj/item/weapon/tool/weldingtool = 50,/obj/item/weapon/tool/wirecutters = 30, /obj/item/weapon/tool/wirecutters/pliers = 30,
+	prices = list(/obj/item/stack/cable_coil/random = 100,/obj/item/weapon/tool/crowbar = 30,/obj/item/weapon/tool/weldingtool = 50,/obj/item/weapon/tool/wirecutters = 30, /obj/item/weapon/tool/wirecutters/pliers = 30,
 					/obj/item/weapon/tool/wrench = 30,/obj/item/device/scanner/gas = 50,/obj/item/device/t_scanner = 50, /obj/item/weapon/tool/screwdriver = 30, /obj/item/clothing/gloves/insulated/cheap  = 80, /obj/item/clothing/gloves/insulated = 600,
 					/obj/item/weapon/storage/pouch/engineering_tools = 300, /obj/item/weapon/storage/pouch/engineering_supply = 600)
 
@@ -1554,7 +1555,7 @@
 					/obj/item/weapon/tool/screwdriver = 30,
 					/obj/item/weapon/tool/crowbar = 30,
 					/obj/item/weapon/tool/wirecutters = 30,
-					/obj/item/weapon/tool/wirecutters/pliers = 30,
+					/obj/item/weapon/tool/wirecutters/pliers = 30
 					/obj/item/weapon/tool/multitool = 40,
 					/obj/item/weapon/tool/hammer = 30,
 					/obj/item/weapon/tool/wrench = 40,
