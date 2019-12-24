@@ -971,9 +971,8 @@
 		/obj/item/device/assembly/igniter = 3,
 		/obj/item/device/assembly/signaler = 6,
 		/obj/item/weapon/tool/wirecutters = 1,
-		/obj/item/weapon/tool/wirecutters/pliers = 1
+		/obj/item/weapon/tool/wirecutters/pliers = 1,
 		/obj/item/weapon/cartridge/signal = 4)
-	)
 	contraband = list(/obj/item/device/lighting/toggleable/flashlight = 5,
 						/obj/item/device/assembly/timer = 2)
 	product_ads = "Only the finest!;Have some tools.;The most robust equipment.;The finest gear in space!"
@@ -1555,7 +1554,7 @@
 					/obj/item/weapon/tool/screwdriver = 30,
 					/obj/item/weapon/tool/crowbar = 30,
 					/obj/item/weapon/tool/wirecutters = 30,
-					/obj/item/weapon/tool/wirecutters/pliers = 30
+					/obj/item/weapon/tool/wirecutters/pliers = 30,
 					/obj/item/weapon/tool/multitool = 40,
 					/obj/item/weapon/tool/hammer = 30,
 					/obj/item/weapon/tool/wrench = 40,
