@@ -16,7 +16,7 @@
 var/global/list/obj/machinery/telecomms/telecomms_list = list()
 
 /obj/machinery/telecomms
-	icon = 'icons/obj/machines/telecomms.dmi'
+	icon = 'icons/obj/stationobjs.dmi'
 	density = TRUE
 	anchored = TRUE
 	use_power = IDLE_POWER_USE
@@ -333,6 +333,7 @@ var/global/list/obj/machinery/telecomms/telecomms_list = list()
 
 /obj/machinery/telecomms/hub
 	name = "telecommunication hub"
+	icon = 'icons/obj/stationobjs.dmi'
 	icon_state = "hub"
 	idle_power_usage = 1600
 	machinetype = 7
