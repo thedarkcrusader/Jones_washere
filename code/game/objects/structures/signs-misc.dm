@@ -3,11 +3,6 @@
 /obj/structure/sign/misc
 	icon = 'icons/obj/decals-misc.dmi'
 
-/obj/structure/sign/misc/arcade
-	name = "arcade sign"
-	desc = "A sign for the arcade area."
-	icon_state = "arcade"
-
 /obj/structure/sign/misc/enlist
 	name = "enlistment sign"
 	desc = "A battered military recruitment sign."
@@ -94,15 +89,10 @@
 /obj/structure/sign/misc/maltesefalcon/right
 	icon_state = "maltesefalcon-right"
 
-/obj/structure/sign/misc/map
-	name = "framed station map"
-	desc = "A preserved blueprint of some sort of space station."
-	icon_state = "map-left"
-
-/obj/structure/sign/misc/map/right
-	name = "framed station map"
-	desc = "A preserved blueprint of some sort of space station."
-	icon_state = "map-right"
+/obj/structure/sign/misc/arcade
+	name = "arcade sign"
+	desc = "A sign for the arcade area."
+	icon_state = "arcade"
 
 /obj/structure/sign/misc/garden
 	name = "garden sign"

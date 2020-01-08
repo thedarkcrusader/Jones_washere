@@ -4,6 +4,9 @@
 	icon = 'icons/obj/decals-warning.dmi'
 
 /obj/structure/sign/atmos/atmos_co2
+	icon = 'icons/obj/decals-warning.dmi'
+
+/obj/structure/sign/atmos/atmos_co2
 	name = "carbon dioxide warning sign"
 	desc = "WARNING! CO2 flow tube. Ensure the flow is disengaged before working."
 	icon_state = "atmos_co2"

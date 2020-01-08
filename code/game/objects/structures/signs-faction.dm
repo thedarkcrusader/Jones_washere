@@ -5,56 +5,56 @@
 
 /obj/structure/sign/faction/ironhammer
 	name = "Ironhammer Security"
-	desc = "A sign depicting the insignia of the Ironhammer Security, a mercenary group. This poster looks quite old, this group likely isn't around anymore."
+	desc = "A sign depicting the insignia of Ironhammer Security, the military firm."
 	icon_state = "ironhammer"
 
 /obj/structure/sign/faction/ironhammer_banner
 	name = "Ironhammer Security"
-	desc = "A banner depicting the insignia of Ironhammer Security, a mercenary group. This poster looks quite old, this group likely isn't around anymore."
+	desc = "A banner depicting the insignia of Ironhammer Security, the military firm."
 	icon_state = "ironhammerold"
 
 /obj/structure/sign/faction/one_star
-	name = "Greyson Positronics"
-	desc = "A rugged banner depicting the all-seeing eye of Greyson Positronics, the fallen mega-corporation."
+	name = "One Star"
+	desc = "A rugged banner depicting the all-seeing eye of One Star, the fallen empire."
 	icon_state = "one_star"
 
 /obj/structure/sign/faction/one_star_old
-	name = "Greyson Positronics"
-	desc = "A torn banner depicting the all-seeing eye of Greyson Positronics, the fallen mega-corporation."
+	name = "One Star"
+	desc = "A torn banner depicting the all-seeing eye of One Star, the fallen empire."
 	icon_state = "one_star_old"
 
 /obj/structure/sign/faction/frozenstar
 	name = "Frozen Star"
-	desc = "A sign depicting the insignia of the Frozen Star, a weapons manufacturer. This poster looks quite old, this group likely isn't around anymore."
+	desc = "A sign depicting the insignia of Frozen Star, the prominent weapons manufacturer."
 	icon_state = "frozenstar"
 
 /obj/structure/sign/faction/moebius
-	name = "Soteria Laboratories"
-	desc = "A sign depicting the insignia of Soteria Institute, the pharmaceutical and research organisation."
+	name = "Moebius Laboratories"
+	desc = "A sign depicting the insignia of Moebius Laboratories, the pharmaceutical and research organisation."
 	icon_state = "moebius"
 
 /obj/structure/sign/faction/neotheology
-	name = "Absolutism"
-	desc = "A sign depicting the Tau Cross - the symbol of the Absolute."
+	name = "NeoTheology"
+	desc = "A sign depicting the Tau Cross - the symbol of NeoTheology."
 	icon_state = "neotheology"
 
 /obj/structure/sign/faction/neotheology_old
-	name = "Absolutism"
-	desc = "A decaying sign depicting the Tau Cross - the symbol of the Absolute."
+	name = "NeoTheology"
+	desc = "A decaying sign depicting the Tau Cross - the symbol of NeoTheology."
 	icon_state = "neotheology-old"
 
 /obj/structure/sign/faction/neotheology_cross
-	name = "Absolutism Tau Cross"
-	desc = "The religious symbol of Absolutism - the Tau cross. This one appears to be decorative."
+	name = "NeoTheology Tau Cross"
+	desc = "The religious symbol of NeoTheology - the Tau cross. This one appears to be decorative."
 	icon_state = "wall_cross_steel"
 
 /obj/structure/sign/faction/neotheology_cross/gold
-	desc = "The religious symbol of Absolutism - the Tau cross. This one appears to be decorative."
+	desc = "The religious symbol of NeoTheology - the Tau cross. This one appears to be decorative."
 	icon_state = "wall_cross_gold"
 
 /obj/structure/sign/faction/astersguild
-	name = "Lonestar Guild"
-	desc = "A sign depicting the insignia of Lonestar Shipping Solutions, LLC; the transport monopolists."
+	name = "Asters Guild"
+	desc = "A sign depicting the insignia of Asters Guild, the transport monopolists."
 	icon_state = "astersguild"
 
 /obj/structure/sign/faction/technomancers
@@ -79,15 +79,15 @@
 
 /obj/structure/sign/faction/solgov
 	name = "\improper SolGov"
-	desc = "A blue metal banner with a Sol Federation insignia."
+	desc = "A blue metal banner with a SolGov insignia.."
 	icon_state = "solgovseal"
 
 /obj/structure/sign/faction/derelict1
 	name = "decrepit sign"
-	desc = "A rusted sign displaying some technical information. It's too worn to read."
+	desc = "A rusted sign displaying some technical information. Too worn to read, unfortunately."
 	icon_state = "something-old1"
 
 /obj/structure/sign/faction/derelict2
 	name = "decrepit sign"
-	desc = "A rusted sign displaying some kind of old insignia. It looks eerily imposing."
+	desc = "A rusted sign displaying some kind of old insignia. It looks imposing."
 	icon_state = "something-old2"
