@@ -17,8 +17,8 @@
 	one_hand_penalty = 20
 
 /obj/item/weapon/gun/projectile/colt/IH_colt
-	name = "BM HG .45 \"Bronco\""
-	desc = "A rugged derivative of the venerable M1911, modernized to the M1911A3 standard by the Blackshield Militia and has less recoil as a result. Uses .45 rounds."
+	name = "FS HG .45 \"Bronco\""
+	desc = "A rugged derivative of the venerable M1911, modernized to the M1911A3 standard. Uses .45 rounds."
 	icon_state = "IH_colt"
 	item_state = "IH_colt"
 	auto_eject = 1
