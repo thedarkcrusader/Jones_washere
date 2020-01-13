@@ -6,7 +6,7 @@
 ////////////////////////////
 */
 /datum/sprite_accessory/tail
-	name = "Hide Tail"
+	name = "force no tail"
 	icon = 'icons/mob/sprite_accessory/tails.dmi'
 	colored_layers = 0 //Set to 1 to enable coloration using the tail color.
 	extra_overlay // Change the icon name when adding extra layers
@@ -17,8 +17,18 @@
 	var/extra_overlay_w // Wagging state for extra overlay
 	var/layers = 0
 
-/datum/sprite_accessory/tail/akulahc
-	name = "Akula Tail"
+/datum/sprite_accessory/tail/squirrel_orange
+	name = "squirel, orange"
+	desc = ""
+	icon_state = "squirrel-orange"
+
+/datum/sprite_accessory/tail/squirrel_red
+	name = "squirrel, red"
+	desc = ""
+	icon_state = "squirrel-red"
+
+/datum/sprite_accessory/tail/squirrel
+	name = "squirrel, colorable"
 	desc = ""
 	icon_state = "sharktail_hc_s"
 	colored_layers = 1

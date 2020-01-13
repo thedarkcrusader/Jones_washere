@@ -6,7 +6,7 @@
 ////////////////////////////
 */
 /datum/sprite_accessory/wings
-	name = "Hide Wings"
+	name = "force no wings"
 	icon = 'icons/mob/sprite_accessory/wings.dmi'
 	colored_layers = 0 //Set to 1 to enable coloration using the tail color.
 	extra_overlay // Use remaining layers from another sprite name rather than the original.
@@ -17,11 +17,21 @@
 	var/extra_overlay_w // Flapping state for extra overlay
 	var/layers = 0
 
+/datum/sprite_accessory/wings/bat_black
+	name = "Bat Wings, Black"
+	desc = ""
+	icon_state = "bat-black"
+
 /datum/sprite_accessory/wings/bat_color
-	name = "Bat Wings"
+	name = "Bat Wings, Colorable"
 	desc = ""
 	icon_state = "bat-color"
 	colored_layers = 1
+
+/datum/sprite_accessory/wings/bat_red
+	name = "Bat Wings, Red"
+	desc = ""
+	icon_state = "bat-red"
 
 /datum/sprite_accessory/wings/bee
 	name = "Bee Wings"
@@ -33,8 +43,13 @@
 	desc = ""
 	icon_state = "citheronia_wings"
 
-/datum/sprite_accessory/wings/cyberdragon
+/datum/sprite_accessory/wings/cyberdragon_red
 	name = "Cyberdragon Wings"
+	desc = ""
+	icon_state = "cyberdragon_red_s"
+
+/datum/sprite_accessory/wings/cyberdragon
+	name = "Cyberdragon Wings, Colorable"
 	desc = ""
 	icon_state = "cyberdragon_s"
 	colored_layers = 1
@@ -49,11 +64,6 @@
 	name = "Demon Wings"
 	desc = ""
 	icon_state = "sepulchre_wings"
-
-/datum/sprite_accessory/wings/devil
-	name = "Devil Wings"
-	desc = ""
-	icon_state = "bat-red"
 
 /datum/sprite_accessory/wings/dragonfly
 	name = "Dragonfly Wings"
@@ -93,7 +103,7 @@
 	icon_state = "liquidfirefly-eyestalks"
 
 /datum/sprite_accessory/wings/greentaj
-	name = "Green Wings"
+	name = "Green Taj Wings"
 	desc = ""
 	icon_state = "scree-wings"
 
@@ -111,8 +121,13 @@
 	colored_layers = 1
 	blend = ICON_MULTIPLY
 
+/datum/sprite_accessory/wings/Moth_royal
+	name = "Moth Wings, Royal"
+	desc = ""
+	icon_state = "Moth_royal"
+
 /datum/sprite_accessory/wings/Moth_royal_colorable
-	name = "Moth Wings"
+	name = "Moth Wings, Royal Colorable"
 	desc = ""
 	icon_state = "Moth_royal_colorable"
 	colored_layers = 1
@@ -122,8 +137,6 @@
 	name = "Moth Wings, With Antenna"
 	desc = ""
 	icon_state = "moth_full"
-	colored_layers = 1
-	blend = ICON_MULTIPLY
 
 /datum/sprite_accessory/wings/nevrean
 	name = "Nevrean Wings/Fantail"
@@ -131,6 +144,11 @@
 	icon_state = "nevrean_s"
 	colored_layers = 1
 	blend = ICON_MULTIPLY
+
+/datum/sprite_accessory/wings/pharoah
+	name = "Pharoah Hound Tail"
+	desc = ""
+	icon_state = "shock"
 
 /datum/sprite_accessory/wings/spider_legs
 	name = "Spider Legs"
@@ -173,3 +191,14 @@
 	icon_state = "spines_short_membrane"
 	colored_layers = 1
 	blend = ICON_MULTIPLY
+
+/datum/sprite_accessory/wings/wingwolf
+	name = "Wingwolf Wings"
+	desc = ""
+	icon_state = "kerena-wings"
+	ckeys_allowed = list("somekindofpony")
+
+/datum/sprite_accessory/wings/xenomorph
+	name = "Xenomorph Backplate"
+	desc = ""
+	icon_state = "snag-backplate"
