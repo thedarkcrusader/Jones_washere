@@ -101,6 +101,13 @@
 	colored_layers = 1
 	blend = ICON_MULTIPLY
 
+/datum/sprite_accessory/ears/bunny_swooped
+	name = "bunny ears, swooped"
+	desc = ""
+	icon_state = "swooped_bunny"
+	colored_layers = 1
+	blend = ICON_MULTIPLY
+
 /datum/sprite_accessory/ears/caprahorns
 	name = "caprine horns"
 	desc = ""
