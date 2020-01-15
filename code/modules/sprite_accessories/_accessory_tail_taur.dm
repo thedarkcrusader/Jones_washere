@@ -46,7 +46,7 @@
 	var/msg_prey_stepunder		= "You run between %prey's legs." //Same, inverse#
 
 /datum/sprite_accessory/tail/taur/alraune
-	name = "Alraune (natje) (Taur)"
+	name = "Alraune (Taur)"
 	icon_state = "alraune_s"
 	ani_state = "alraune_closed_s"
 	ckeys_allowed = list("natje")
@@ -75,22 +75,6 @@
 	msg_prey_grab_fail = "%owner steps down onto you with one of their vines, squishing you and forcing you onto the ground!"
 
 /datum/sprite_accessory/tail/taur/alraune/alraune_2c
-	name = "Alraune (dual color)"
-	icon_state = "alraunecolor_s"
-	ani_state = "alraunecolor_closed_s"
-	ckeys_allowed = null
-	colored_layers = 2
-	extra_overlay_w = "alraunecolor_closed_markings"
-
-
-
-/datum/sprite_accessory/tail/taur/roiz_long_lizard // Not ACTUALLY a taur, but it uses 32x64 so it wouldn't fit in tails.dmi, and having it as a tail bugs up the sprite.
-	name = "Long Lizard Tail (Roiz Lizden)"
-	icon_state = "roiz_tail_s"
-	colored_layers = 0
-	can_ride = 0
-
-/datum/sprite_accessory/tail/taur/alraune/alraune_2c
 	name = "Alraune Dual Color (Taur)"
 	icon_state = "alraunecolor_s"
 	ani_state = "alraunecolor_closed_s"
@@ -103,10 +87,40 @@
 	icon_state = "ariana_s"
 	colored_layers = 0
 
+	msg_owner_disarm_run = "You quickly push %prey to the ground with your leg!"
+	msg_prey_disarm_run = "%owner pushes you down to the ground with their leg!"
+
+	msg_owner_disarm_walk = "You firmly push your leg down on %prey, painfully but harmlessly pinning them to the ground!"
+	msg_prey_disarm_walk = "%owner firmly pushes their leg down on you, quite painfully but harmlessly pinning you to the ground!"
+
+	msg_owner_harm_walk = "You methodically place your leg down upon %prey's body, slowly applying pressure, crushing them against the floor below!"
+	msg_prey_harm_walk = "%owner methodically places their leg upon your body, slowly applying pressure, crushing you against the floor below!"
+
+	msg_owner_grab_success = "You pin %prey down on the ground with your front leg before using your other leg to pick them up, trapping them between two of your front legs!"
+	msg_prey_grab_success = "%owner pins you down on the ground with their front leg before using their other leg to pick you up, trapping you between two of their front legs!"
+
+	msg_owner_grab_fail = "You step down onto %prey, squishing them and forcing them down to the ground!"
+	msg_prey_grab_fail = "%owner steps down and squishes you with their leg, forcing you down to the ground!"
+
 /datum/sprite_accessory/tail/taur/cow
 	name = "Cow (Taur)"
 	icon_state = "cow_s"
 	suit_sprites = 'icons/mob/taursuit/cow.dmi'
+
+	msg_owner_disarm_run = "You quickly push %prey to the ground with your hoof!"
+	msg_prey_disarm_run = "%owner pushes you down to the ground with their hoof!"
+
+	msg_owner_disarm_walk = "You firmly push your hoof down on %prey, painfully but harmlessly pinning them to the ground!"
+	msg_prey_disarm_walk = "%owner firmly pushes their hoof down on you, quite painfully but harmlessly pinning you to the ground!"
+
+	msg_owner_harm_walk = "You methodically place your hoof down upon %prey's body, slowly applying pressure, crushing them against the floor below!"
+	msg_prey_harm_walk = "%owner methodically places their hoof upon your body, slowly applying pressure, crushing you against the floor below!"
+
+	msg_owner_grab_success = "You pin %prey to the ground before scooping them up with your hooves!"
+	msg_prey_grab_success = "%owner pins you to the ground before scooping you up with their hooves!"
+
+	msg_owner_grab_fail = "You step down onto %prey, squishing them and forcing them down to the ground!"
+	msg_prey_grab_fail = "%owner steps down and squishes you with their hoof, forcing you down to the ground!"
 
 /datum/sprite_accessory/tail/taur/wolf/serdy
 	name = "CyberWolf (Taur)"
@@ -117,10 +131,39 @@
 	icon_state = "deer_s"
 	colored_layers = 2
 
+/datum/sprite_accessory/tail/taur/wolf/serdy
+	name = "CyberWolf (Taur)"
+	icon_state = "serdy_s"
+
 /datum/sprite_accessory/tail/taur/drake //Enabling on request, no suit compatibility but then again see 2 above.
 	name = "Drake (Taur)"
 	icon_state = "drake_s"
 	colored_layers = 2
+
+/datum/sprite_accessory/tail/taur/feline
+	name = "Feline (Taur)"
+	icon_state = "feline_s"
+
+/datum/sprite_accessory/tail/taur/feline/feline_2c
+	name = "Feline Dual Color (Taur)"
+	icon_state = "feline_s"
+	colored_layers = 2
+
+/datum/sprite_accessory/tail/taur/feline/variant
+	name = "Feline Spotted (Taur)"
+	icon_state = "tempest_s"
+
+/datum/sprite_accessory/tail/taur/frog
+	name = "Frog (Taur)"
+	icon_state = "frog_s"
+
+/datum/sprite_accessory/tail/taur/horse
+	name = "Horse (Taur)"
+	icon_state = "horse_s"
+	suit_sprites = 'icons/mob/taursuit/horse.dmi'
+
+	msg_owner_disarm_run = "You quickly push %prey to the ground with your hoof!"
+	msg_prey_disarm_run = "%owner pushes you down to the ground with their hoof!"
 
 /datum/sprite_accessory/tail/taur/feline
 	name = "Feline (Taur)"
@@ -165,6 +208,33 @@
 	icon_state = "naga_s"
 	suit_sprites = 'icons/mob/taursuit/naga.dmi'
 
+	msg_owner_help_walk = "You carefully slither around %prey."
+	msg_prey_help_walk = "%owner's huge tail slithers past beside you!"
+
+	msg_owner_help_run = "You carefully slither around %prey."
+	msg_prey_help_run = "%owner's huge tail slithers past beside you!"
+
+	msg_owner_disarm_run = "Your tail slides over %prey, pushing them down to the ground!"
+	msg_prey_disarm_run = "%owner's tail slides over you, forcing you down to the ground!"
+
+	msg_owner_disarm_walk = "You push down on %prey with your tail, pinning them down under you!"
+	msg_prey_disarm_walk = "%owner pushes down on you with their tail, pinning you down below them!"
+
+	msg_owner_harm_run = "Your heavy tail carelessly slides past %prey, crushing them!"
+	msg_prey_harm_run = "%owner quickly goes over your body, carelessly crushing you with their heavy tail!"
+
+	msg_owner_harm_walk = "Your heavy tail slowly and methodically slides down upon %prey, crushing against the floor below!"
+	msg_prey_harm_walk = "%owner's thick, heavy tail slowly and methodically slides down upon your body, mercilessly crushing you into the floor below!"
+
+	msg_owner_grab_success = "You slither over %prey with your large, thick tail, smushing them against the ground before coiling up around them, trapping them within the tight confines of your tail!"
+	msg_prey_grab_success = "%owner slithers over you with their large, thick tail, smushing you against the ground before coiling up around you, trapping you within the tight confines of their tail!"
+
+	msg_owner_grab_fail = "You squish %prey under your large, thick tail, forcing them onto the ground!"
+	msg_prey_grab_fail = "%owner pins you under their large, thick tail, forcing you onto the ground!"
+
+	msg_prey_stepunder = "You jump over %prey's thick tail."
+	msg_owner_stepunder = "%owner bounds over your tail."
+
 /datum/sprite_accessory/tail/taur/naga/naga_2c
 	name = "Naga Dual Color (Taur)"
 	icon_state = "naga_s"
@@ -179,35 +249,36 @@
 	name = "Slug (Taur)"
 	icon_state = "slug_s"
 
+	msg_owner_help_walk = "You carefully slither around %prey."
+	msg_prey_help_walk = "%owner's huge tail slithers past beside you!"
+
+	msg_owner_help_run = "You carefully slither around %prey."
+	msg_prey_help_run = "%owner's huge tail slithers past beside you!"
+
+	msg_owner_disarm_run = "Your tail slides over %prey, pushing them down to the ground!"
+	msg_prey_disarm_run = "%owner's tail slides over you, forcing you down to the ground!"
+
+	msg_owner_disarm_walk = "You push down on %prey with your tail, pinning them down under you!"
+	msg_prey_disarm_walk = "%owner pushes down on you with their tail, pinning you down below them!"
+
+	msg_owner_harm_run = "Your heavy tail carelessly slides past %prey, crushing them!"
+	msg_prey_harm_run = "%owner quickly goes over your body, carelessly crushing you with their heavy tail!"
+
+	msg_owner_harm_walk = "Your heavy tail slowly and methodically slides down upon %prey, crushing against the floor below!"
+	msg_prey_harm_walk = "%owner's thick, heavy tail slowly and methodically slides down upon your body, mercilessly crushing you into the floor below!"
+
+	msg_owner_grab_success = "You slither over %prey with your large, thick tail, smushing them against the ground before coiling up around them, trapping them within the tight confines of your tail!"
+	msg_prey_grab_success = "%owner slithers over you with their large, thick tail, smushing you against the ground before coiling up around you, trapping you within the tight confines of their tail!"
+
+	msg_owner_grab_fail = "You squish %prey under your large, thick tail, forcing them onto the ground!"
+	msg_prey_grab_fail = "%owner pins you under their large, thick tail, forcing you onto the ground!"
+
+	msg_prey_stepunder = "You jump over %prey's thick tail."
+	msg_owner_stepunder = "%owner bounds over your tail."
+
 /datum/sprite_accessory/tail/taur/spider
 	name = "Spider (Taur)"
 	icon_state = "spider_s"
-
-/datum/sprite_accessory/tail/taur/synthfeline
-	name = "SynthFeline (Taur)"
-	icon_state = "synthfeline_s"
-	colored_layers = 2
-
-/datum/sprite_accessory/tail/taur/synthhorse
-	name = "SynthHorse (Taur)"
-	icon_state = "synthhorse_s"
-	colored_layers = 2
-
-//wickedtemp: Chakat Tempest
-/datum/sprite_accessory/tail/taur/feline/tempest
-	name = "Feline (Taur)"
-	icon_state = "tempest_s"
-
-//silencedmp5a5: Serdykov Antoz
-/datum/sprite_accessory/tail/taur/wolf/serdy
-	name = "CyberSerdy (Taur)"
-	icon_state = "serdy_s"
-
-//liquidfirefly: Ariana Scol
-/datum/sprite_accessory/tail/taur/centipede
-	name = "Centipede (Taur)"
-	icon_state = "ariana_s"
-	colored_layers = 0
 
 	msg_owner_disarm_run = "You quickly push %prey to the ground with your leg!"
 	msg_prey_disarm_run = "%owner pushes you down to the ground with their leg!"
@@ -223,3 +294,68 @@
 
 	msg_owner_grab_fail = "You step down onto %prey, squishing them and forcing them down to the ground!"
 	msg_prey_grab_fail = "%owner steps down and squishes you with their leg, forcing you down to the ground!"
+
+/datum/sprite_accessory/tail/taur/synthfeline
+	name = "SynthFeline Dual Color (Taur)"
+	icon_state = "synthfeline_s"
+	colored_layers = 2
+
+/datum/sprite_accessory/tail/taur/synthhorse
+	name = "SynthHorse Dual Color (Taur)"
+	icon_state = "synthhorse_s"
+	colored_layers = 2
+
+/datum/sprite_accessory/tail/taur/synthlizard
+	name = "SynthLizard Dual Color (Taur)"
+	icon_state = "synthlizard_s"
+	colored_layers = 2
+
+/datum/sprite_accessory/tail/taur/synthwolf
+	name = "SynthWolf Dual Color (Taur)"
+	icon_state = "synthwolf_s"
+	colored_layers = 2
+
+/datum/sprite_accessory/tail/taur/tents
+	name = "Tentacles (Taur)"
+	icon_state = "tent_s"
+	can_ride = 0
+
+	msg_prey_stepunder = "You run between %prey's tentacles."
+	msg_owner_stepunder = "%owner runs between your tentacles."
+
+	msg_owner_disarm_run = "You quickly push %prey to the ground with some of your tentacles!"
+	msg_prey_disarm_run = "%owner pushes you down to the ground with some of their tentacles!"
+
+	msg_owner_disarm_walk = "You push down on %prey with some of your tentacles, pinning them down firmly under you!"
+	msg_prey_disarm_walk = "%owner pushes down on you with some of their tentacles, pinning you down firmly below them!"
+
+	msg_owner_harm_run = "Your tentacles carelessly slide past %prey, crushing them!"
+	msg_prey_harm_run = "%owner quickly goes over your body, carelessly crushing you with their tentacles!"
+
+	msg_owner_harm_walk = "Your tentacles methodically apply pressure on %prey's body, crushing them against the floor below!"
+	msg_prey_harm_walk = "%owner's thick tentacles methodically apply pressure on your body, crushing you into the floor below!"
+
+	msg_owner_grab_success = "You slide over %prey with your tentacles, smushing them against the ground before wrapping one up around them, trapping them within the tight confines of your tentacles!"
+	msg_prey_grab_success = "%owner slides over you with their tentacles, smushing you against the ground before wrapping one up around you, trapping you within the tight confines of their tentacles!"
+
+	msg_owner_grab_fail = "You step down onto %prey with one of your tentacles, forcing them onto the ground!"
+	msg_prey_grab_fail = "%owner steps down onto you with one of their tentacles, squishing you and forcing you onto the ground!"
+
+/datum/sprite_accessory/tail/taur/wolf
+	name = "Wolf (Taur)"
+	icon_state = "wolf_s"
+	suit_sprites = 'icons/mob/taursuit/wolf.dmi'
+
+/datum/sprite_accessory/tail/taur/wolf/wolf_2c
+	name = "Wolf Dual Color (Taur)"
+	icon_state = "wolf_s"
+	colored_layers = 2
+
+
+
+
+
+
+
+
+

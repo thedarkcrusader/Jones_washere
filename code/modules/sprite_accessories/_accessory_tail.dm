@@ -6,7 +6,7 @@
 ////////////////////////////
 */
 /datum/sprite_accessory/tail
-	name = "force no tail"
+	name = "Hide Tail"
 	icon = 'icons/mob/sprite_accessory/tails.dmi'
 	colored_layers = 0 //Set to 1 to enable coloration using the tail color.
 	extra_overlay // Change the icon name when adding extra layers
@@ -17,22 +17,11 @@
 	var/extra_overlay_w // Wagging state for extra overlay
 	var/layers = 0
 
-/datum/sprite_accessory/tail/squirrel_orange
-	name = "squirel, orange"
-	desc = ""
-	icon_state = "squirrel-orange"
-
-/datum/sprite_accessory/tail/squirrel_red
-	name = "squirrel, red"
-	desc = ""
-	icon_state = "squirrel-red"
-
-/datum/sprite_accessory/tail/squirrel
-	name = "squirrel, colorable"
+/datum/sprite_accessory/tail/akulahc
+	name = "Akula Tail"
 	desc = ""
 	icon_state = "sharktail_hc_s"
 	colored_layers = 1
-	blend = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/armalishc
 	name = "Armalis Tail"
@@ -59,8 +48,13 @@
 	colored_layers = 1
 	blend = ICON_MULTIPLY
 
-/datum/sprite_accessory/tail/bear
+/datum/sprite_accessory/tail/bear_brown
 	name = "Bear Tail"
+	desc = ""
+	icon_state = "bear-brown"
+
+/datum/sprite_accessory/tail/bear
+	name = "Bear Tail, colorable"
 	desc = ""
 	icon_state = "bear"
 	colored_layers = 1
@@ -123,13 +117,6 @@
 	colored_layers = 2
 	blend = ICON_MULTIPLY
 
-/datum/sprite_accessory/tail/fennechc
-	name = "Fennec Tail"
-	desc = ""
-	icon_state = "fentail_hc_s"
-	colored_layers = 1
-	blend = ICON_MULTIPLY
-
 /datum/sprite_accessory/tail/fennecsune
 	name = "Fennecsune Tails"
 	desc = ""
@@ -141,17 +128,27 @@
 	icon_state = "ketraitail"
 	ani_state = "ketraitail_w"
 
+/datum/sprite_accessory/tail/fennechc
+	name = "Flatland Zorren Tail"
+	desc = ""
+	icon_state = "fentail_hc_s"
+	colored_layers = 1
+	blend = ICON_MULTIPLY
+
 /datum/sprite_accessory/tail/fluffdragon
 	name = "Fluffdragon Tail"
 	desc = ""
 	icon_state = "miria-fluffdragontail"
 
-/datum/sprite_accessory/tail/foxhc
-	name = "Fox Tail"
+/datum/sprite_accessory/tail/foxtailbeewings
+	name = "Fox Tail And Beewings"
 	desc = ""
-	icon_state = "foxtail_hc_s"
-	colored_layers = 1
-	blend = ICON_MULTIPLY
+	icon_state = "reika"
+
+/datum/sprite_accessory/tail/greentaj
+	name = "Green Taj Tail"
+	desc = ""
+	icon_state = "scree"
 
 /datum/sprite_accessory/tail/satyr
 	name = "Goat Legs"
@@ -159,6 +156,13 @@
 	icon_state = "satyr"
 	blend = ICON_MULTIPLY
 	colored_layers = 1
+
+/datum/sprite_accessory/tail/foxhc
+	name = "Highlander Zorren Tail"
+	desc = ""
+	icon_state = "foxtail_hc_s"
+	colored_layers = 1
+	blend = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/horse
 	name = "Horse Tail"
@@ -229,8 +233,13 @@
 	colored_layers = 1
 	blend = ICON_MULTIPLY
 
-/datum/sprite_accessory/tail/mouse
+/datum/sprite_accessory/tail/mouse_pink
 	name = "Mouse Tail"
+	desc = ""
+	icon_state = "mouse-pink"
+
+/datum/sprite_accessory/tail/mouse
+	name = "Mouse Tail, Colorable"
 	desc = ""
 	icon_state = "mouse"
 	colored_layers = 1
@@ -291,7 +300,7 @@
 	blend = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/seromitailfeatheredhc
-	name = "Seromi Tail, Feathers"
+	name = "Seromi Tail With Feathers"
 	desc = ""
 	icon_state = "seromitail_feathers_hc_s"
 	colored_layers = 1
@@ -303,7 +312,6 @@
 	icon_state = "straighttail"
 	ani_state = "straighttail_w"
 	colored_layers = 1
-	blend = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/skunktail
 	name = "Skunk Tail"
@@ -332,8 +340,23 @@
 	colored_layers = 1
 	blend = ICON_MULTIPLY
 
-/datum/sprite_accessory/tail/stripey
+/datum/sprite_accessory/tail/squirrel_orange
+	name = "Squirrel Tail, Orange"
+	desc = ""
+	icon_state = "squirrel-orange"
+
+/datum/sprite_accessory/tail/squirrel_red
+	name = "Squirrel Tail, Red"
+	desc = ""
+	icon_state = "squirrel-red"
+
+/datum/sprite_accessory/tail/stripeytail_brown
 	name = "Stripey Taj Tail"
+	desc = ""
+	icon_state = "stripeytail-brown"
+
+/datum/sprite_accessory/tail/stripey
+	name = "Stripey Taj Tail, Colorable"
 	desc = ""
 	icon_state = "stripeytail"
 	colored_layers = 2
@@ -355,7 +378,7 @@
 	blend = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/tajaranhc
-	name = "Sablekyne Tail"
+	name = "Tajaran Tail"
 	desc = ""
 	icon_state = "tajtail_hc_s"
 	colored_layers = 1
@@ -417,6 +440,26 @@
 	colored_layers = 2
 	blend = ICON_MULTIPLY
 
+/datum/sprite_accessory/tail/wolfblack
+	name = "Wolf Tail, Black"
+	desc = ""
+	icon_state = "wolf"
+
+/datum/sprite_accessory/tail/wolf_grey
+	name = "Wolf Tail, Grey"
+	desc = ""
+	icon_state = "wolf-grey"
+
+/datum/sprite_accessory/tail/wolf_green
+	name = "Wolf Tail, Green"
+	desc = ""
+	icon_state = "wolf-green"
+
+/datum/sprite_accessory/tail/wolfwise
+	name = "Wolf Tail, Wise"
+	desc = ""
+	icon_state = "wolf-wise"
+
 /datum/sprite_accessory/tail/unathihc
 	name = "Unathi Tail"
 	desc = ""
@@ -455,7 +498,7 @@
 	icon_state = "xenos_queen_tail_s"
 
 /datum/sprite_accessory/tail/zenghu_taj
-	name = "Zeng-Hu Feline Synth Tail"
+	name = "Zeng-Hu Tajaran Synth Tail"
 	desc = ""
 	icon_state = "zenghu_taj"
 
