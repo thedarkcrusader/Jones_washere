@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>(global) - Space Station 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">Space Station 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="global.html#var">Var Details</a> - <a href="global.html#proc">Proc Details</a></header>
+<main>
+<h1>(global)
+        
+    
+            <a href="https://github.com/sojourn-13/sojourn-station/blob/c93dc63a1294737e499249c1da8f7e454048ff8c/(unknown)">
+        <img src="git.png" width="16" height="16" title="(unknown)"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="global.html#var/Failsafe">Failsafe</a></th><td>Failsafe</td></tr>
+            <tr><th><a href="global.html#var/Master">Master</a></th><td>StonedMC</td></tr>
+            <tr><th><a href="global.html#var/access_cent_general">access_cent_general</a></th><td>Central Command</td></tr>
+            <tr><th><a href="global.html#var/access_huntmaster">access_huntmaster</a></th><td>Hunt Lodge</td></tr>
+            <tr><th><a href="global.html#var/access_mercenary">access_mercenary</a></th><td>Antag access</td></tr>
+            <tr><th><a href="global.html#var/access_nt_disciple">access_nt_disciple</a></th><td>NeoTheology</td></tr>
+            <tr><th><a href="global.html#var/access_prospector">access_prospector</a></th><td>Prospectors</td></tr>
+            <tr><th><a href="global.html#var/access_security">access_security</a></th><td>Station access</td></tr>
+            <tr><th><a href="global.html#var/access_synth">access_synth</a></th><td>Misc</td></tr>
+            <tr><th><a href="global.html#var/default_abstract_uplink_icon">default_abstract_uplink_icon</a></th><td>Abstract Uplink Entries</td></tr>
+            <tr><th><a href="global.html#var/photo_count">photo_count</a></th><td>photo</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="global.html#proc/Broadcast_Message">Broadcast_Message</a></th><td>Here is the big, bad function that broadcasts a message given the appropriate
+parameters.
+@param connection:
+The datum generated in radio.dm, stored in signal.data[&quot;connection&quot;].
+@param M:
+Reference to the mob/speaker, stored in signal.data[&quot;mob&quot;]
+@param vmask:
+Boolean value if the mob is &quot;hiding&quot; its identity via voice mask, stored in
+signal.data[&quot;vmask&quot;]
+@param vmessage:
+If specified, will display this as the message; such as &quot;chimpering&quot;
+for monkies if the mob is not understood. Stored in signal.data[&quot;vmessage&quot;].
+@param radio:
+Reference to the radio broadcasting the message, stored in signal.data[&quot;radio&quot;]
+@param message:
+The actual string message to display to mobs who understood mob M. Stored in
+signal.data[&quot;message&quot;]
+@param name:
+The name to display when a mob receives the message. signal.data[&quot;name&quot;]
+@param job:
+The name job to display for the AI when it receives the message. signal.data[&quot;job&quot;]
+@param realname:
+The &quot;real&quot; name associated with the mob. signal.data[&quot;realname&quot;]
+@param vname:
+If specified, will use this name when mob M is not understood. signal.data[&quot;vname&quot;]
+@param data:
+If specified:
+1 -- Will only broadcast to intercoms
+2 -- Will only broadcast to intercoms and ham radios
+3 -- Broadcast to syndicate frequency
+4 -- AI can't track down this person. Useful for imitation broadcasts where you can't find the actual mob
+@param compression:
+If 0, the signal is audible
+If nonzero, the signal may be partially inaudible or just complete gibberish.
+@param level:
+The list of Z levels that the sending radio is broadcasting to. Having 0 in the list broadcasts on all levels
+@param freq
+The frequency of the signal</td></tr>
+            <tr><th><a href="global.html#proc/CreateBans">CreateBans</a></th><td>DEBUG</td></tr>
+            <tr><th><a href="global.html#proc/callHook">callHook</a></th><td>@file hooks.dm
+Implements hooks, a simple way to run code on pre-defined events.</td></tr>
+            <tr><th><a href="global.html#proc/find_nearby_burrow">find_nearby_burrow</a></th><td>Burrow Finding and Sorting</td></tr>
+            <tr><th><a href="global.html#proc/formatSpeech">formatSpeech</a></th><td>List of symbols that we dont want a dot after
+Last character in the message</td></tr>
+            <tr><th><a href="global.html#proc/generate_record_id">generate_record_id</a></th><td>L.fields[&quot;id_gender&quot;]	= gender2text(H.identifying_gender)</td></tr>
+            <tr><th><a href="global.html#proc/getAssignedBlock">getAssignedBlock</a></th><td>DNA MACHINES</td></tr>
+            <tr><th><a href="global.html#proc/getOPressureDifferential">getOPressureDifferential</a></th><td>Gets the highest and lowest pressures from the tiles in cardinal directions
+around us, then checks the difference.</td></tr>
+            <tr><th><a href="global.html#proc/get_default_outfit_backpack">get_default_outfit_backpack</a></th><td>Helpers</td></tr>
+            <tr><th><a href="global.html#proc/get_random_uplink_items">get_random_uplink_items</a></th><td>Support procs</td></tr>
+            <tr><th><a href="global.html#proc/get_wound_type">get_wound_type</a></th><td>WOUND DEFINITIONS</td></tr>
+            <tr><th><a href="global.html#proc/is_special_character">is_special_character</a></th><td>ADMIN HELPER PROCS</td></tr>
+            <tr><th><a href="global.html#proc/makeDatumRefLists">makeDatumRefLists</a></th><td>Initial Building</td></tr>
+            <tr><th><a href="global.html#proc/message_adminTicket">message_adminTicket</a></th><td></td></tr>
+            <tr><th><a href="global.html#proc/message_mentorTicket">message_mentorTicket</a></th><td></td></tr>
+            <tr><th><a href="global.html#proc/number_of_issues">number_of_issues</a></th><td>USED BY UNIT TEST: uniqueness.dm</td></tr>
+            <tr><th><a href="global.html#proc/pick_n_take_stash_datum">pick_n_take_stash_datum</a></th><td>Note Creation</td></tr>
+            <tr><th><a href="global.html#proc/storyteller_button">storyteller_button</a></th><td>datum/storyteller/proc/trigger_event()</td></tr>
+            <tr><th><a href="global.html#proc/strip_improper">strip_improper</a></th><td>Strip out the special beyond characters for \proper and \improper
+from text that will be sent to the browser.</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/Failsafe"><aside class="declaration">var </aside>Failsafe
+            <aside>&ndash; /<a href="datum.html">datum</a>/controller/failsafe</aside>
+        
+    
+            <a href="https://github.com/sojourn-13/sojourn-station/blob/c93dc63a1294737e499249c1da8f7e454048ff8c/code/controllers/failsafe.dm#L8">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;failsafe.dm 8"/></a></h3>
+        <p>Failsafe</p>
+<p>Pretty much pokes the MC to make sure it's still alive.</p><h3 id="var/Master"><aside class="declaration">var </aside>Master
+            <aside>&ndash; /static/<a href="datum.html">datum</a>/controller/master</aside>
+        
+    
+            <a href="https://github.com/sojourn-13/sojourn-station/blob/c93dc63a1294737e499249c1da8f7e454048ff8c/code/controllers/master.dm#L11">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;master.dm 11"/></a></h3>
+        <p>StonedMC</p>
+<p>Designed to properly split up a given tick among subsystems
+Note: if you read parts of this code and think &quot;why is it doing it that way&quot;
+Odds are, there is a reason</p><h3 id="var/access_cent_general"><aside class="declaration">var </aside>access_cent_general
+            <aside>&ndash; /const</aside>
+        
+    
+            <a href="https://github.com/sojourn-13/sojourn-station/blob/c93dc63a1294737e499249c1da8f7e454048ff8c/code/game/jobs/access_datum.dm#L480">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;jobs&#x2F;access_datum.dm 480"/></a></h3>
+        <p>Central Command</p><h3 id="var/access_huntmaster"><aside class="declaration">var </aside>access_huntmaster
+            <aside>&ndash; /const</aside>
+        
+    
+            <a href="https://github.com/sojourn-13/sojourn-station/blob/c93dc63a1294737e499249c1da8f7e454048ff8c/code/game/jobs/access_datum.dm#L471">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;jobs&#x2F;access_datum.dm 471"/></a></h3>
+        <p>Hunt Lodge</p><h3 id="var/access_mercenary"><aside class="declaration">var </aside>access_mercenary
+            <aside>&ndash; /const</aside>
+        
+    
+            <a href="https://github.com/sojourn-13/sojourn-station/blob/c93dc63a1294737e499249c1da8f7e454048ff8c/code/game/jobs/access_datum.dm#L544">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;jobs&#x2F;access_datum.dm 544"/></a></h3>
+        <p>Antag access</p><h3 id="var/access_nt_disciple"><aside class="declaration">var </aside>access_nt_disciple
+            <aside>&ndash; /const</aside>
+        
+    
+            <a href="https://github.com/sojourn-13/sojourn-station/blob/c93dc63a1294737e499249c1da8f7e454048ff8c/code/game/jobs/access_datum.dm#L413">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;jobs&#x2F;access_datum.dm 413"/></a></h3>
+        <p>NeoTheology</p><h3 id="var/access_prospector"><aside class="declaration">var </aside>access_prospector
+            <aside>&ndash; /const</aside>
+        
+    
+            <a href="https://github.com/sojourn-13/sojourn-station/blob/c93dc63a1294737e499249c1da8f7e454048ff8c/code/game/jobs/access_datum.dm#L456">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;jobs&#x2F;access_datum.dm 456"/></a></h3>
+        <p>Prospectors</p><h3 id="var/access_security"><aside class="declaration">var </aside>access_security
+            <aside>&ndash; /const</aside>
+        
+    
+            <a href="https://github.com/sojourn-13/sojourn-station/blob/c93dc63a1294737e499249c1da8f7e454048ff8c/code/game/jobs/access_datum.dm#L13">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;jobs&#x2F;access_datum.dm 13"/></a></h3>
+        <p>Station access</p><h3 id="var/access_synth"><aside class="declaration">var </aside>access_synth
+            <aside>&ndash; /const</aside>
+        
+    
+            <a href="https://github.com/sojourn-13/sojourn-station/blob/c93dc63a1294737e499249c1da8f7e454048ff8c/code/game/jobs/access_datum.dm#L557">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;jobs&#x2F;access_datum.dm 557"/></a></h3>
+        <p>Misc</p><h3 id="var/default_abstract_uplink_icon"><aside class="declaration">var </aside>default_abstract_uplink_icon
+            <aside>&ndash; /image</aside>
+        
+    
+            <a href="https://github.com/sojourn-13/sojourn-station/blob/c93dc63a1294737e499249c1da8f7e454048ff8c/code/datums/uplink/uplink_items.dm#L135">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;uplink&#x2F;uplink_items.dm 135"/></a></h3>
+        <p>Abstract Uplink Entries</p><h3 id="var/photo_count"><aside class="declaration">var </aside>photo_count
+            <aside>&ndash; /static</aside>
+        
+    
+            <a href="https://github.com/sojourn-13/sojourn-station/blob/c93dc63a1294737e499249c1da8f7e454048ff8c/code/modules/paperwork/photography.dm#L24">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;paperwork&#x2F;photography.dm 24"/></a></h3>
+        <p>photo</p><h2 id="proc">Proc Details</h2><h3 id="proc/Broadcast_Message"><aside class="declaration">proc </aside>Broadcast_Message<aside>(/<a href="datum.html">datum</a>/radio_frequency/connection, /<a href="mob.html">mob</a>/M, vmask, vmessage, /<a href="obj/item.html">obj/item</a>/device/radio/radio, message, name, job, realname, vname, data, compression, /list/level, freq, verbage, /<a href="datum.html">datum</a>/language/speaking, text_size) 
+        
+    
+            <a href="https://github.com/sojourn-13/sojourn-station/blob/c93dc63a1294737e499249c1da8f7e454048ff8c/code/game/machinery/telecomms/broadcaster.dm#L203">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;machinery&#x2F;telecomms&#x2F;broadcaster.dm 203"/></a></aside>
+        </h3>
+        <p>Here is the big, bad function that broadcasts a message given the appropriate
+parameters.
+@param connection:
+The datum generated in radio.dm, stored in signal.data[&quot;connection&quot;].
+@param M:
+Reference to the mob/speaker, stored in signal.data[&quot;mob&quot;]
+@param vmask:
+Boolean value if the mob is &quot;hiding&quot; its identity via voice mask, stored in
+signal.data[&quot;vmask&quot;]
+@param vmessage:
+If specified, will display this as the message; such as &quot;chimpering&quot;
+for monkies if the mob is not understood. Stored in signal.data[&quot;vmessage&quot;].
+@param radio:
+Reference to the radio broadcasting the message, stored in signal.data[&quot;radio&quot;]
+@param message:
+The actual string message to display to mobs who understood mob M. Stored in
+signal.data[&quot;message&quot;]
+@param name:
+The name to display when a mob receives the message. signal.data[&quot;name&quot;]
+@param job:
+The name job to display for the AI when it receives the message. signal.data[&quot;job&quot;]
+@param realname:
+The &quot;real&quot; name associated with the mob. signal.data[&quot;realname&quot;]
+@param vname:
+If specified, will use this name when mob M is not understood. signal.data[&quot;vname&quot;]
+@param data:
+If specified:
+1 -- Will only broadcast to intercoms
+2 -- Will only broadcast to intercoms and ham radios
+3 -- Broadcast to syndicate frequency
+4 -- AI can't track down this person. Useful for imitation broadcasts where you can't find the actual mob
+@param compression:
+If 0, the signal is audible
+If nonzero, the signal may be partially inaudible or just complete gibberish.
+@param level:
+The list of Z levels that the sending radio is broadcasting to. Having 0 in the list broadcasts on all levels
+@param freq
+The frequency of the signal</p><h3 id="proc/CreateBans"><aside class="declaration">proc </aside>CreateBans<aside>() 
+        
+    
+            <a href="https://github.com/sojourn-13/sojourn-station/blob/c93dc63a1294737e499249c1da8f7e454048ff8c/code/modules/admin/NewBan.dm#L197">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;admin&#x2F;NewBan.dm 197"/></a></aside>
+        </h3>
+        <p>DEBUG</p><h3 id="proc/callHook"><aside class="declaration">proc </aside>callHook<aside>(hook, /list/args) 
+        
+    
+            <a href="https://github.com/sojourn-13/sojourn-station/blob/c93dc63a1294737e499249c1da8f7e454048ff8c/code/controllers/hooks.dm#L26">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;hooks.dm 26"/></a></aside>
+        </h3>
+        <p>@file hooks.dm
+Implements hooks, a simple way to run code on pre-defined events.</p>
+<ul>
+<li>
+<p>@page hooks Code hooks</p>
+</li>
+<li>
+<p>@section hooks Hooks</p>
+</li>
+<li>
+<p>A hook is defined under /hook in the type tree.</p>
+</li>
+<li>
+<p>To add some code to be called by the hook, define a proc under the type, as so:</p>
+</li>
+<li>
+<p>@code
+hook/foo/proc/bar()
+if(1)
+return 1 //Sucessful
+else
+return 0 //Error, or runtime.</p>
+</li>
+<li>
+<p>@endcode</p>
+</li>
+<li>
+<p>All hooks must return nonzero on success, as runtimes will force return null.</p>
+</li>
+</ul>
+<p>Calls a hook, executing every piece of code that's attached to it.
+@param hook	Identifier of the hook to call.
+@returns		1 if all hooked code runs successfully, 0 otherwise.</p><h3 id="proc/find_nearby_burrow"><aside class="declaration">proc </aside>find_nearby_burrow<aside>(/<a href="atom.html">atom</a>/target, dist) 
+        
+    
+            <a href="https://github.com/sojourn-13/sojourn-station/blob/c93dc63a1294737e499249c1da8f7e454048ff8c/code/controllers/subsystems/migration.dm#L418">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;subsystems&#x2F;migration.dm 418"/></a></aside>
+        </h3>
+        <p>Burrow Finding and Sorting</p><h3 id="proc/formatSpeech"><aside class="declaration">proc </aside>formatSpeech<aside>(message, delimiter, openTag, closeTag) 
+        
+    
+            <a href="https://github.com/sojourn-13/sojourn-station/blob/c93dc63a1294737e499249c1da8f7e454048ff8c/code/modules/mob/living/say.dm#L306">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;say.dm 306"/></a></aside>
+        </h3>
+        <p>List of symbols that we dont want a dot after
+Last character in the message</p><h3 id="proc/generate_record_id"><aside class="declaration">proc </aside>generate_record_id<aside>() 
+        
+    
+            <a href="https://github.com/sojourn-13/sojourn-station/blob/c93dc63a1294737e499249c1da8f7e454048ff8c/code/datums/datacore.dm#L240">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;datacore.dm 240"/></a></aside>
+        </h3>
+        <p>L.fields[&quot;id_gender&quot;]	= gender2text(H.identifying_gender)</p><h3 id="proc/getAssignedBlock"><aside class="declaration">proc </aside>getAssignedBlock<aside>(name, /list/blocksLeft, activity_bounds) 
+        
+    
+            <a href="https://github.com/sojourn-13/sojourn-station/blob/c93dc63a1294737e499249c1da8f7e454048ff8c/code/game/dna/setup_genetics.dm#L8">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;dna&#x2F;setup_genetics.dm 8"/></a></aside>
+        </h3>
+        <p>DNA MACHINES</p><h3 id="proc/getOPressureDifferential"><aside class="declaration">proc </aside>getOPressureDifferential<aside>(/<a href="turf.html">turf</a>/loc) 
+        
+    
+            <a href="https://github.com/sojourn-13/sojourn-station/blob/c93dc63a1294737e499249c1da8f7e454048ff8c/code/__HELPERS/game.dm#L478">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;game.dm 478"/></a></aside>
+        </h3>
+        <p>Gets the highest and lowest pressures from the tiles in cardinal directions
+around us, then checks the difference.</p><h3 id="proc/get_default_outfit_backpack"><aside class="declaration">proc </aside>get_default_outfit_backpack<aside>() 
+        
+    
+            <a href="https://github.com/sojourn-13/sojourn-station/blob/c93dc63a1294737e499249c1da8f7e454048ff8c/code/datums/outfits/equipment/backpacks.dm#L166">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;outfits&#x2F;equipment&#x2F;backpacks.dm 166"/></a></aside>
+        </h3>
+        <p>Helpers</p><h3 id="proc/get_random_uplink_items"><aside class="declaration">proc </aside>get_random_uplink_items<aside>(/<a href="obj/item.html">obj/item</a>/device/uplink/U, remaining_TC, loc) 
+        
+    
+            <a href="https://github.com/sojourn-13/sojourn-station/blob/c93dc63a1294737e499249c1da8f7e454048ff8c/code/datums/uplink/uplink_items.dm#L145">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;uplink&#x2F;uplink_items.dm 145"/></a></aside>
+        </h3>
+        <p>Support procs</p><h3 id="proc/get_wound_type"><aside class="declaration">proc </aside>get_wound_type<aside>(type, damage) 
+        
+    
+            <a href="https://github.com/sojourn-13/sojourn-station/blob/c93dc63a1294737e499249c1da8f7e454048ff8c/code/modules/organs/wound.dm#L219">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;organs&#x2F;wound.dm 219"/></a></aside>
+        </h3>
+        <p>WOUND DEFINITIONS</p><h3 id="proc/is_special_character"><aside class="declaration">proc </aside>is_special_character<aside>(/<a href="mob.html">mob</a>/M) 
+        
+    
+            <a href="https://github.com/sojourn-13/sojourn-station/blob/c93dc63a1294737e499249c1da8f7e454048ff8c/code/modules/admin/admin.dm#L837">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;admin&#x2F;admin.dm 837"/></a></aside>
+        </h3>
+        <p>ADMIN HELPER PROCS</p><h3 id="proc/makeDatumRefLists"><aside class="declaration">proc </aside>makeDatumRefLists<aside>() 
+        
+    
+            <a href="https://github.com/sojourn-13/sojourn-station/blob/c93dc63a1294737e499249c1da8f7e454048ff8c/code/__HELPERS/global_lists.dm#L193">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;global_lists.dm 193"/></a></aside>
+        </h3>
+        <p>Initial Building</p><h3 id="proc/message_adminTicket"><aside class="declaration">proc </aside>message_adminTicket<aside>(msg, important, quiet, tag, tagtext) 
+        
+    
+            <a href="https://github.com/sojourn-13/sojourn-station/blob/c93dc63a1294737e499249c1da8f7e454048ff8c/code/modules/admin/admin.dm#L37">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;admin&#x2F;admin.dm 37"/></a></aside>
+        </h3>
+        <ul>
+<li>Sends a message to the staff able to see admin tickets</li>
+<li>Arguments:</li>
+<li>msg - The message being send</li>
+<li>important - If the message is important. If TRUE it will ignore the PREF_HEAR preferences,
+send a sound and flash the window. Defaults to FALSE</li>
+</ul><h3 id="proc/message_mentorTicket"><aside class="declaration">proc </aside>message_mentorTicket<aside>(msg, important, quiet, tag, tagtext) 
+        
+    
+            <a href="https://github.com/sojourn-13/sojourn-station/blob/c93dc63a1294737e499249c1da8f7e454048ff8c/code/modules/admin/admin.dm#L52">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;admin&#x2F;admin.dm 52"/></a></aside>
+        </h3>
+        <ul>
+<li>Sends a message to the staff able to see mentor tickets</li>
+<li>Arguments:</li>
+<li>msg - The message being send</li>
+<li>important - If the message is important. If TRUE it will ignore the PREF_HEAR preferences,
+send a sound and flash the window. Defaults to FALSE</li>
+</ul><h3 id="proc/number_of_issues"><aside class="declaration">proc </aside>number_of_issues<aside>(/list/entries, type) 
+        
+    
+            <a href="https://github.com/sojourn-13/sojourn-station/blob/c93dc63a1294737e499249c1da8f7e454048ff8c/code/modules/unit_tests/uniqueness.dm#L26">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;unit_tests&#x2F;uniqueness.dm 26"/></a></aside>
+        </h3>
+        <p>USED BY UNIT TEST: uniqueness.dm</p><h3 id="proc/pick_n_take_stash_datum"><aside class="declaration">proc </aside>pick_n_take_stash_datum<aside>() 
+        
+    
+            <a href="https://github.com/sojourn-13/sojourn-station/blob/c93dc63a1294737e499249c1da8f7e454048ff8c/code/modules/stashes/stash_datum.dm#L361">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;stashes&#x2F;stash_datum.dm 361"/></a></aside>
+        </h3>
+        <p>Note Creation</p><h3 id="proc/storyteller_button"><aside class="declaration">proc </aside>storyteller_button<aside>() 
+        
+    
+            <a href="https://github.com/sojourn-13/sojourn-station/blob/c93dc63a1294737e499249c1da8f7e454048ff8c/code/game/gamemodes/storyteller.dm#L201">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;gamemodes&#x2F;storyteller.dm 201"/></a></aside>
+        </h3>
+        <p>datum/storyteller/proc/trigger_event()</p><h3 id="proc/strip_improper"><aside class="declaration">proc </aside>strip_improper<aside>(text) 
+        
+    
+            <a href="https://github.com/sojourn-13/sojourn-station/blob/c93dc63a1294737e499249c1da8f7e454048ff8c/code/__HELPERS/text.dm#L406">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;text.dm 406"/></a></aside>
+        </h3>
+        <p>Strip out the special beyond characters for \proper and \improper
+from text that will be sent to the browser.</p></main>
+<footer>
+    sojourn-station.dme
+    <a href="https://github.com/sojourn-13/sojourn-station/tree/c93dc63a1294737e499249c1da8f7e454048ff8c">c93dc63</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.3.0</a></footer>
+</body>
+</html>
