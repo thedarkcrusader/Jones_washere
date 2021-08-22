@@ -240,16 +240,16 @@
 				character.update_underwear(0) //4
 				character.backpack_setup = new(backpack, backpack_metadata["[backpack]"]) //4
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
-			if ("Furry",)
+			//if ("Furry",)
 				categoriesChanged=null
-				character.blood_color = blood_color //6
-				character.ears = GLOB.ears_styles_list[ears_style] //6
-				character.ears_colors = ears_colors
-				character.tail = GLOB.tail_styles_list[tail_style] //6
-				character.tail_colors = tail_colors
-				character.wings = GLOB.wings_styles_list[wings_style] //6
-				character.wings_colors = wings_colors
-				character.body_markings = body_markings //6
+			//	character.blood_color = blood_color //6
+			//	character.ears = GLOB.ears_styles_list[ears_style] //6
+			//	character.ears_colors = ears_colors
+			//	character.tail = GLOB.tail_styles_list[tail_style] //6
+			//	character.tail_colors = tail_colors
+			//	character.wings = GLOB.wings_styles_list[wings_style] //6
+			//	character.wings_colors = wings_colors
+			//	character.body_markings = body_markings //6
 			if ("Augmentation",)
 				categoriesChanged=null
 				character.update_implants(0) //7-8
@@ -313,14 +313,14 @@
 	character.backpack_setup = new(backpack, backpack_metadata["[backpack]"]) //4
 
 
-	character.blood_color = blood_color //6
-	character.ears = GLOB.ears_styles_list[ears_style] //6
-	character.ears_colors = ears_colors
-	character.tail = GLOB.tail_styles_list[tail_style] //6
-	character.tail_colors = tail_colors
-	character.wings = GLOB.wings_styles_list[wings_style] //6
-	character.wings_colors = wings_colors
-	character.body_markings = body_markings //6
+	//character.blood_color = blood_color //6
+	//character.ears = GLOB.ears_styles_list[ears_style] //6
+	//character.ears_colors = ears_colors
+	//character.tail = GLOB.tail_styles_list[tail_style] //6
+	//character.tail_colors = tail_colors
+	//character.wings = GLOB.wings_styles_list[wings_style] //6
+	//character.wings_colors = wings_colors
+	//character.body_markings = body_markings //6
 
 	character.update_implants(0) //7-8
 

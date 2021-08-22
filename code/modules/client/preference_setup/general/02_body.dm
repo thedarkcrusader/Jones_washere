@@ -179,9 +179,9 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		var/new_species = input(user, "Choose your character's species:", CHARACTER_PREFERENCE_INPUT_TITLE, pref.species) as null|anything in global.playable_species
 		if(new_species && CanUseTopic(user))
 			pref.species = new_species
-			pref.ears_style = "Default"
-			pref.tail_style = "Default"
-			pref.wings_style = "Default"
+		//	pref.ears_style = "Default"
+		//	pref.tail_style = "Default"
+		//	pref.wings_style = "Default"
 			pref.setup_options["Career"] = "None"
 			pref.setup_options["Homeworld"] = "None"
 			pref.setup_options["Upbringing"] = "None"

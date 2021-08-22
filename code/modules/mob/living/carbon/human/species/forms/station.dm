@@ -30,7 +30,7 @@
 	blood_mask*/
 
 /datum/species_form/canine
-	playable = TRUE
+	playable = FALSE
 	name = FORM_CANINE
 	base = 'icons/mob/human_races/r_vulpkanin.dmi'
 	deform = null	//TODO: White vulp deformed sprites. There aren't even regular ones here.
@@ -42,21 +42,21 @@
 	blood_mask*/
 
 /datum/species_form/feline
-	playable = TRUE
+	playable = FALSE
 	name = FORM_FELINE
 	base = 'icons/mob/human_races/r_tajaran_white.dmi'
 	deform = 'icons/mob/human_races/r_def_tajaran_white.dmi'
 	appearance_flags = HAS_HAIR_COLOR | HAS_EYE_COLOR | HAS_SKIN_COLOR | HAS_UNDERWEAR
 
 /datum/species_form/shark
-	playable = TRUE
+	playable = FALSE
 	name = FORM_SHARK
 	base = 'icons/mob/human_races/r_akula.dmi'
 	deform = 'icons/mob/human_races/r_def_akula.dmi'
 	appearance_flags = HAS_HAIR_COLOR | HAS_EYE_COLOR | HAS_SKIN_COLOR | HAS_UNDERWEAR
 
 /datum/species_form/lizard
-	playable = TRUE
+	playable = FALSE
 	name = FORM_LIZARD
 	variantof = FORM_LIZARD
 	base = 'icons/mob/human_races/r_lizard_white.dmi'
@@ -74,14 +74,14 @@
 	deform = 'icons/mob/human_races/r_def_tgsharp_white.dmi'
 
 /datum/species_form/vulpine
-	playable = TRUE
+	playable = FALSE
 	name = FORM_VULPINE
 	base = 'icons/mob/human_races/r_fox_white.dmi'
 	deform = 'icons/mob/human_races/r_def_fox.dmi'
 	appearance_flags = HAS_HAIR_COLOR | HAS_EYE_COLOR | HAS_SKIN_COLOR | HAS_UNDERWEAR
 
 /datum/species_form/fennec
-	playable = TRUE
+	playable = FALSE
 	name = FORM_FENNEC
 	base = 'icons/mob/human_races/r_fennec_white.dmi'
 	deform = null //'icons/mob/human_races/r_def_fennec_white.dmi' //TODO: White fennec deformed sprites.
@@ -103,14 +103,14 @@
 	appearance_flags = HAS_HAIR_COLOR | HAS_EYE_COLOR | HAS_SKIN_COLOR | HAS_UNDERWEAR
 
 /datum/species_form/moth
-	playable = TRUE
+	playable = FALSE
 	name = FORM_MOTH
 	base = 'icons/mob/human_races/r_moth.dmi'
 	deform = null
 	appearance_flags = HAS_HAIR_COLOR | HAS_UNDERWEAR | HAS_EYE_COLOR
 
 /datum/species_form/moth_white
-	playable = TRUE
+	playable = FALSE
 	name = FORM_MOTH_WHITE
 	base = 'icons/mob/human_races/r_moth_white.dmi'
 	deform = null
