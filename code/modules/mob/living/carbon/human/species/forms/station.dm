@@ -29,93 +29,6 @@
 	damage_mask
 	blood_mask*/
 
-/datum/species_form/canine
-	playable = FALSE
-	name = FORM_CANINE
-	base = 'icons/mob/human_races/r_vulpkanin.dmi'
-	deform = null	//TODO: White vulp deformed sprites. There aren't even regular ones here.
-	appearance_flags = HAS_HAIR_COLOR | HAS_EYE_COLOR | HAS_SKIN_COLOR | HAS_UNDERWEAR
-/*	deform = 'icons/mob/human_races/r_def_vulpkanin.dmi'
-	face
-	damage_overlays
-	damage_mask
-	blood_mask*/
-
-/datum/species_form/feline
-	playable = FALSE
-	name = FORM_FELINE
-	base = 'icons/mob/human_races/r_tajaran_white.dmi'
-	deform = 'icons/mob/human_races/r_def_tajaran_white.dmi'
-	appearance_flags = HAS_HAIR_COLOR | HAS_EYE_COLOR | HAS_SKIN_COLOR | HAS_UNDERWEAR
-
-/datum/species_form/shark
-	playable = FALSE
-	name = FORM_SHARK
-	base = 'icons/mob/human_races/r_akula.dmi'
-	deform = 'icons/mob/human_races/r_def_akula.dmi'
-	appearance_flags = HAS_HAIR_COLOR | HAS_EYE_COLOR | HAS_SKIN_COLOR | HAS_UNDERWEAR
-
-/datum/species_form/lizard
-	playable = FALSE
-	name = FORM_LIZARD
-	variantof = FORM_LIZARD
-	base = 'icons/mob/human_races/r_lizard_white.dmi'
-	deform = 'icons/mob/human_races/r_def_lizard_white.dmi'
-	appearance_flags = HAS_HAIR_COLOR | HAS_EYE_COLOR | HAS_SKIN_COLOR | HAS_UNDERWEAR
-
-/datum/species_form/lizard/tgsmooth
-	name = FORM_LIZARD_TGSMOOTH
-	base = 'icons/mob/human_races/r_tgsmooth_white.dmi'
-	deform = 'icons/mob/human_races/r_def_tgsmooth_white.dmi'
-
-/datum/species_form/lizard/tgsharp
-	name = FORM_LIZARD_TGSHARP
-	base = 'icons/mob/human_races/r_tgsharp_white.dmi'
-	deform = 'icons/mob/human_races/r_def_tgsharp_white.dmi'
-
-/datum/species_form/vulpine
-	playable = FALSE
-	name = FORM_VULPINE
-	base = 'icons/mob/human_races/r_fox_white.dmi'
-	deform = 'icons/mob/human_races/r_def_fox.dmi'
-	appearance_flags = HAS_HAIR_COLOR | HAS_EYE_COLOR | HAS_SKIN_COLOR | HAS_UNDERWEAR
-
-/datum/species_form/fennec
-	playable = FALSE
-	name = FORM_FENNEC
-	base = 'icons/mob/human_races/r_fennec_white.dmi'
-	deform = null //'icons/mob/human_races/r_def_fennec_white.dmi' //TODO: White fennec deformed sprites.
-	appearance_flags = HAS_HAIR_COLOR | HAS_EYE_COLOR | HAS_SKIN_COLOR | HAS_UNDERWEAR
-
-/datum/species_form/avian
-	playable = FALSE
-	name = FORM_AVIAN
-	base = 'icons/mob/human_races/r_nevrean.dmi'
-	deform = 'icons/mob/human_races/r_def_nevrean.dmi'
-	appearance_flags = HAS_HAIR_COLOR | HAS_EYE_COLOR | HAS_SKIN_COLOR | HAS_UNDERWEAR
-
-
-/datum/species_form/spider
-	playable = TRUE
-	name = FORM_SPIDER
-	base = 'icons/mob/human_races/r_spider.dmi'
-	deform = 'icons/mob/human_races/r_def_spider.dmi'
-	appearance_flags = HAS_HAIR_COLOR | HAS_EYE_COLOR | HAS_SKIN_COLOR | HAS_UNDERWEAR
-
-/datum/species_form/moth
-	playable = FALSE
-	name = FORM_MOTH
-	base = 'icons/mob/human_races/r_moth.dmi'
-	deform = null
-	appearance_flags = HAS_HAIR_COLOR | HAS_UNDERWEAR | HAS_EYE_COLOR
-
-/datum/species_form/moth_white
-	playable = FALSE
-	name = FORM_MOTH_WHITE
-	base = 'icons/mob/human_races/r_moth_white.dmi'
-	deform = null
-	appearance_flags = HAS_HAIR_COLOR | HAS_EYE_COLOR | HAS_SKIN_COLOR | HAS_UNDERWEAR
-
 /datum/species_form/stationxeno
 	playable = FALSE
 	name = FORM_STATIONXENO
@@ -139,62 +52,6 @@
 	name = FORM_STATIONXENO_SENTI
 	base = 'icons/mob/human_races/xenos/r_xenos_sentinel.dmi'
 	deform = 'icons/mob/human_races/xenos/r_xenos_sentinel.dmi'
-
-/datum/species_form/sablekyne
-	playable = FALSE
-	name = FORM_SABLEKYNE
-	base = 'icons/mob/human_races/r_sablekyne_white.dmi'
-	deform = 'icons/mob/human_races/r_def_sablekyne_white.dmi'
-	appearance_flags = HAS_HAIR_COLOR | HAS_EYE_COLOR | HAS_SKIN_COLOR | HAS_UNDERWEAR
-
-/datum/species_form/marqua
-	playable = FALSE
-	name = FORM_MARQUA
-	base = 'icons/mob/human_races/r_marqua_vr.dmi'
-	deform = 'icons/mob/human_races/r_def_marqua.dmi'
-	appearance_flags = HAS_HAIR_COLOR | HAS_EYE_COLOR | HAS_SKIN_COLOR | HAS_UNDERWEAR
-
-/datum/species_form/kriosan
-	playable = FALSE
-	name = FORM_KRIOSAN
-	base = 'icons/mob/human_races/r_vulpkanin.dmi'
-	deform = null	//TODO: White vulp deformed sprites. There aren't even regular ones here.
-	appearance_flags = HAS_HAIR_COLOR | HAS_EYE_COLOR | HAS_SKIN_COLOR | HAS_UNDERWEAR
-
-/datum/species_form/akula
-	playable = FALSE
-	name = FORM_AKULA
-	base = 'icons/mob/human_races/r_akula.dmi'
-	deform = 'icons/mob/human_races/r_def_akula.dmi'
-	appearance_flags = HAS_HAIR_COLOR | HAS_EYE_COLOR | HAS_SKIN_COLOR | HAS_UNDERWEAR
-
-/datum/species_form/naramad
-	playable = FALSE
-	name = FORM_NARAMAD
-	base = 'icons/mob/human_races/r_sergal.dmi'
-	deform = 'icons/mob/human_races/r_def_sergal.dmi'
-	appearance_flags = HAS_HAIR_COLOR | HAS_EYE_COLOR | HAS_SKIN_COLOR | HAS_UNDERWEAR
-
-/datum/species_form/chtmant
-	playable = FALSE
-	name = FORM_CHTMANT
-	base = 'icons/mob/human_races/r_spider.dmi'
-	deform = 'icons/mob/human_races/r_def_spider.dmi'
-	appearance_flags = HAS_HAIR_COLOR | HAS_EYE_COLOR | HAS_SKIN_COLOR | HAS_UNDERWEAR
-
-/datum/species_form/cindarite
-	playable = FALSE
-	name = FORM_CINDAR
-	base = 'icons/mob/human_races/r_lizard_white.dmi'
-	deform = 'icons/mob/human_races/r_def_lizard_white.dmi'
-	appearance_flags = HAS_HAIR_COLOR | HAS_EYE_COLOR | HAS_SKIN_COLOR | HAS_UNDERWEAR
-
-/datum/species_form/sojvox
-	playable = FALSE
-	name = FORM_OPIFEX
-	base = 'icons/mob/human_races/r_nevrean.dmi'
-	deform = 'icons/mob/human_races/r_def_nevrean.dmi'
-	appearance_flags = HAS_HAIR_COLOR | HAS_EYE_COLOR | HAS_SKIN_COLOR | HAS_UNDERWEAR
 
 /datum/species_form/soteria_synthetic
 	playable = FALSE
@@ -275,16 +132,3 @@
 	halloss_message = "falls down with a loud clash and seems to be unresponsive."
 	halloss_message_self = "Your systems are rebooting after an overload."
 
-/datum/species_form/folken
-	playable = FALSE
-	name = FORM_FOLKEN
-	base = 'icons/mob/human_races/r_folken.dmi'
-	deform = null
-	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_EYE_COLOR | HAS_SKIN_COLOR
-
-/datum/species_form/mycus
-	playable = FALSE
-	name = FORM_MYCUS
-	base = 'icons/mob/human_races/r_mycus.dmi'
-	deform = null
-	appearance_flags = HAS_HAIR_COLOR | HAS_UNDERWEAR | HAS_SKIN_COLOR
