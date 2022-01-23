@@ -38,6 +38,10 @@
 
 // /atom signals
 #define COMSIG_EXAMINE "examine"								//from atom/examine(): (mob/user, distance)
+#define COMSIG_ATOM_UPDATE_OVERLAYS "atom_update_overlays"  //update_overlays()
+#define COMSIG_ATOM_UNFASTEN "atom_unfasten" // set_anchored()
+#define COMSIG_CLICK_ALT "alt_click"//from atom/AltClick(): (/mob)
+#define COMSIG_CLICK_CTRL "ctrl_click"//from atom/CtrlClick(): (/mob)
 
 // /area signals
 
@@ -74,12 +78,21 @@
 
 // /obj/item/pda signals
 
+//obj/item/gun signals
+#define COMSIG_GUN_POST_FIRE "gun_post_fire"	//from base of /obj/item/gun/proc/handle_post_fire(): (atom/target, pointblank, reflex)
+
+
 // /obj/item/radio signals
 
 /*******Component Specific Signals*******/
 //Janitor
 
 // /datum/component/storage signals
+
+// /datum/component/heat signals
+#define COMSIG_HEAT_SPECIAL "heat_special"
+#define COMSIG_HEAT_OVERHEAT "heat_overheated"
+#define COMSIG_HEAT_VENT "heat_venting"
 
 /*******Non-Signal Component Related Defines*******/
 
