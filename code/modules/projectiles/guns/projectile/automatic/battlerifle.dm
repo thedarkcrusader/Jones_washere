@@ -162,7 +162,7 @@
 		SEMI_AUTO_NODELAY,
 		BURST_3_ROUND
 		)
-
+/*
 /obj/item/gun/projectile/automatic/omnirifle/omnicarbine/solmarine
 	name = "\"Solarian\" carbine"
 	desc = "An ancient looking rifle found commonly in the Sol Federation's old military stockpiles. Reliable but heavily dated. \
@@ -199,3 +199,4 @@
 	can_dual = TRUE
 	recoil_buildup = 16
 	one_hand_penalty = 20
+*/
