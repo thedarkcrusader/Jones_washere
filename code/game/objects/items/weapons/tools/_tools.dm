@@ -60,7 +60,7 @@
 	//Vars for tool upgrades
 	var/precision = 0	//Subtracted from failure rates
 	var/workspeed = 1	//Worktimes are divided by this
-	var/extra_bulk = 0 	//Extra physicial volume added by certain mods
+
 
 /******************************
 	/* Core Procs */

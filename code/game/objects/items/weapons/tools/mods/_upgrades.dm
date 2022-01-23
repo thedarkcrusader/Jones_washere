@@ -286,6 +286,8 @@
 		T.use_power_cost *= tool_upgrades[UPGRADE_POWERCOST_MULT]
 	if(tool_upgrades[UPGRADE_BULK])
 		T.extra_bulk += tool_upgrades[UPGRADE_BULK]
+	if(tool_upgrades[UPGRADE_BULK])
+		T.extra_bulk += tool_upgrades[UPGRADE_BULK]
 	if(tool_upgrades[UPGRADE_HEALTH_THRESHOLD])
 		T.health_threshold += tool_upgrades[UPGRADE_HEALTH_THRESHOLD]
 	if(tool_upgrades[UPGRADE_MAXFUEL])
@@ -335,6 +337,8 @@
 		G.recoil_buildup *= weapon_upgrades[GUN_UPGRADE_RECOIL]
 	if(weapon_upgrades[GUN_UPGRADE_MUZZLEFLASH])
 		G.muzzle_flash *= weapon_upgrades[GUN_UPGRADE_MUZZLEFLASH]
+	if(tool_upgrades[UPGRADE_BULK])
+		G.extra_bulk += weapon_upgrades[UPGRADE_BULK]
 	if(weapon_upgrades[GUN_UPGRADE_SILENCER])
 		G.silenced = weapon_upgrades[GUN_UPGRADE_SILENCER]
 	if(weapon_upgrades[GUN_UPGRADE_MELEE_DAMAGE])
