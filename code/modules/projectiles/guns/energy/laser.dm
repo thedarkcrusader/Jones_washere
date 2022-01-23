@@ -135,6 +135,7 @@
 		FULL_AUTO_600
 		)
 
+
 /obj/item/gun/energy/lasercore
 	name = "\"Laser Core\" laser carbine"
 	desc = "A high-powered laser carbine made by H&S. It was hailed back in its prime for its high-powered shots and compactness. However, it really consumes power."
