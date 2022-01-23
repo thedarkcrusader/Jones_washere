@@ -108,3 +108,16 @@
 		layer = LYING_HUMAN_LAYER
 	else
 		..()
+
+/*
+same as well. gonna have to look into this later
+/mob/living/carbon/human/proc/process_scope(mob/user)
+	var/obj/item/gun/A = using_scope
+	equipment_darkness_modifier += A.darkness_view
+	equipment_vision_flags |= A.vision_flags
+	if(A.see_invisible_gun >= 0)
+		if(equipment_see_invis)
+			equipment_see_invis = min(equipment_see_invis, A.see_invisible_gun)
+		else
+			equipment_see_invis = A.see_invisible_gun
+*/
