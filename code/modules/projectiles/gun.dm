@@ -314,6 +314,8 @@
 
 		projectile.multiply_projectile_step_delay(proj_step_multiplier)
 
+		projectile.multiply_projectile_agony(proj_agony_multiplier)
+
 		if(istype(projectile, /obj/item/projectile))
 			var/obj/item/projectile/P = projectile
 			P.adjust_damages(proj_damage_adjust)
