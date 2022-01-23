@@ -1,4 +1,4 @@
-/obj/item/gun/energy/cog
+/obj/item/gun/energy/retro
 	name = "\"Cog\" lasgun"
 	icon = 'icons/obj/guns/energy/cog.dmi'
 	icon_state = "cog"
@@ -20,17 +20,17 @@
 	)
 	twohanded = TRUE
 
-/obj/item/gun/energy/cog/New()
+/obj/item/gun/energy/retro/New()
 	..()
 	if(prob(50))
 		icon = 'icons/obj/guns/energy/cog_alt.dmi'
 	return
 
-/obj/item/gun/energy/cog/update_icon()
+/obj/item/gun/energy/retro/update_icon()
 	..()
 	set_item_state(null, back = TRUE)
 
-/obj/item/gun/energy/cog/gear
+/obj/item/gun/energy/retro/gear
 	name = "\"Gear\" lasgun"
 	desc = "A Greyson Positronic design, cheap and widely produced. In the distant past - this was the main weapon of low-rank police forces, billions of copies of this gun were made. They are ubiquitous. \
 	This model has been modified to solely use stun rounds, making it the perfect economy class take down weapon."

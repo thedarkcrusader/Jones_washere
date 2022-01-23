@@ -3069,10 +3069,10 @@
 "agR" = (
 /obj/structure/table/rack,
 /obj/machinery/door/window/southleft,
-/obj/item/gun/energy/cog{
+/obj/item/gun/energy/retro{
 	pixel_y = 8
 	},
-/obj/item/gun/energy/cog,
+/obj/item/gun/energy/retro,
 /turf/simulated/floor/tiled/dark/gray_perforated,
 /area/nadezhda/security/armory)
 "agS" = (
@@ -12565,7 +12565,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/item/gun/energy/cog,
+/obj/item/gun/energy/retro,
 /turf/simulated/floor/tiled/dark/gray_perforated,
 /area/nadezhda/security/armoryshop)
 "axn" = (
