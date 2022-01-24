@@ -157,7 +157,7 @@
 	item_state = "pepperspray"
 	possible_transfer_amounts = null
 	volume = 100
-	var/safety = 1
+	safety = 1
 	preloaded_reagents = list("chlorobenzalmalononitrile" = 100)
 
 /obj/item/reagent_containers/spray/waterflower

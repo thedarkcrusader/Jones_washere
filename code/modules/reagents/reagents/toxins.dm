@@ -785,7 +785,7 @@
 	overdose = REAGENTS_OVERDOSE
 	color = "#545454"
 	var/agony_dose = 0.5
-	var/agony_amount = 2
+	var/agony_amount = 4
 	var/discomfort_message = "<span class='danger'>You feel like the world is turning fuzzy</span>"
 
 /datum/reagent/toxin/chlorobenzalmalononitrile/affect_touch(mob/living/carbon/M, alien, effect_multiplier)
@@ -821,10 +821,10 @@
 		message = SPAN_WARNING("YOUR EYES ARE BURNING!!")
 		if(mouth_covered)
 			M.eye_blurry = max(M.eye_blurry, 15)
-			M.make_dizzy(6)
+			M.make_dizzy(6 * effect_multiplier)
 		else
 			M.eye_blurry = max(M.eye_blurry, 25)
-			M.make_dizzy(12)
+			M.make_dizzy(12 * effect_multiplier)
 
 	if(mouth_covered)
 		if(!message)
@@ -833,7 +833,7 @@
 		message = SPAN_DANGER("Your face and throat feel like it's being roasted to death!")
 		if(prob(25))
 			M.custom_emote(2, "[pick("coughs!","coughs hysterically!","splutters!")]")
-		M.apply_effect(10, AGONY, 0)
+		M.apply_effect(30, AGONY, 0)
 
 /datum/reagent/toxin/chlorobenzalmalononitrile/affect_ingest(mob/living/carbon/M, alien, effect_multiplier)
 	if(ishuman(M))
@@ -846,7 +846,7 @@
 	if(dose == metabolism)
 		to_chat(M, SPAN_DANGER("You feel the blood rushing through your veins like lava!"))
 	else
-		M.apply_effect(4, AGONY, 0)
+		M.apply_effect(agony_amount, AGONY, 0)
 		if(prob(5))
 			M.visible_message("<span class='warning'>[M] [pick("dry heaves!","coughs!","splutters!")]</span>", SPAN_DANGER("You feel like your insides are melting!"))
 	if(isslime(M))
@@ -854,7 +854,7 @@
 	holder.remove_reagent("tramadol", 5)
 
 /datum/reagent/toxin/chlorobenzalmalononitrile/overdose(mob/living/carbon/M, alien, effect_multiplier)
-	M.adjustOxyLoss(0.6 * effect_multiplier)
-	M.take_organ_damage(0.3 * effect_multiplier, 0)
+	M.adjustOxyLoss(5 * effect_multiplier)
+	M.take_organ_damage(5 * effect_multiplier, 0)
 	if(M.losebreath < 15)
 		M.losebreath++
