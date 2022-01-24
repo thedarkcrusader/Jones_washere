@@ -815,9 +815,9 @@
 	var/message
 	if(eyes_covered)
 		if(!mouth_covered)
-			message = SPAN_WARNING("Your [eye_protection] protects your eyes from the pepper spray!")
+			message = SPAN_WARNING("Your [eye_protection] protects your eyes from the nerve gas agent!")
 	else
-		message = SPAN_WARNING("The pepperspray gets in your eyes!")
+		message = SPAN_WARNING("YOUR EYES ARE BURNING!!")
 		if(mouth_covered)
 			M.eye_blurry = max(M.eye_blurry, 15)
 			M.eye_blind = max(M.eye_blind, 5)
@@ -827,9 +827,9 @@
 
 	if(mouth_covered)
 		if(!message)
-			message = SPAN_WARNING("Your [face_protection] protects you from the pepper spray!")
+			message = SPAN_WARNING("Your [face_protection] protects you from the nerve gas agent!")
 	else if(!no_pain)
-		message = SPAN_DANGER("Your face and throat burn!")
+		message = SPAN_DANGER("Your face and throat feel like it's being roasted to death!")
 		if(prob(25))
 			M.custom_emote(2, "[pick("coughs!","coughs hysterically!","splutters!")]")
 		M.Stun(5)
@@ -841,7 +841,7 @@
 		if(H.species && (H.species.flags & NO_PAIN))
 			return
 	if(dose == metabolism)
-		to_chat(M, SPAN_DANGER("You feel like your insides are burning!"))
+		to_chat(M, SPAN_DANGER("You feel the blood rushing through your veins like lava!"))
 	else
 		M.apply_effect(4, AGONY, 0)
 		if(prob(5))
