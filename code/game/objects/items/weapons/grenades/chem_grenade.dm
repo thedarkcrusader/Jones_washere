@@ -367,6 +367,30 @@
 	beakers += B1
 	beakers += B2
 
+/obj/item/grenade/chem_grenade/nervegas
+	name = "NerveGas Grenade"
+	desc = "Containts Chlorobenzalmalononitrile. Contents under pressure. Use with caution."
+	can_be_modified = FALSE
+	icon_state = "grenade"
+	stage = READY
+	path = 1
+
+/obj/item/grenade/chem_grenade/teargas/Initialize()
+	. = ..()
+	var/obj/item/reagent_containers/glass/beaker/large/B1 = new(src)
+	var/obj/item/reagent_containers/glass/beaker/large/B2 = new(src)
+
+	B1.reagents.add_reagent("phosphorus", 40)
+	B1.reagents.add_reagent("potassium", 40)
+	B1.reagents.add_reagent("chlorobenzalmalononitrile", 40)
+	B2.reagents.add_reagent("sugar", 40)
+	B2.reagents.add_reagent("chlorobenzalmalononitrile", 80)
+
+	detonator = new/obj/item/device/assembly_holder/timer_igniter(src)
+
+	beakers += B1
+	beakers += B2
+
 #undef EMPTY
 #undef WIRED
 #undef READY

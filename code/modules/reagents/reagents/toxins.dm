@@ -778,14 +778,15 @@
 	name = "CS powder"
 	id = "chlorobenzalmalononitrile"
 	description = "A Nerve-Agent that works similar to Pepper Spray but higher in potency."
-	taste_description = "satan's piss"
+	taste_description = "the Sun's piss"
 	taste_mult = 10
 	reagent_state = LIQUID
-	touch_met = 50 // Get rid of it quickly
-	color = "#B31008"
-	agony_dose = 0.5
-	agony_amount = 4
-	discomfort_message = "<span class='danger'>You feel like the world is turning fuzzy</span>"
+	touch_met = 30
+	overdose = REAGENTS_OVERDOSE
+	color = "#545454"
+	var/agony_dose = 0.5
+	var/agony_amount = 2
+	var/discomfort_message = "<span class='danger'>You feel like the world is turning fuzzy</span>"
 
 /datum/reagent/toxin/chlorobenzalmalononitrile/affect_touch(mob/living/carbon/M, alien, effect_multiplier)
 	var/eyes_covered = 0
@@ -820,10 +821,10 @@
 		message = SPAN_WARNING("YOUR EYES ARE BURNING!!")
 		if(mouth_covered)
 			M.eye_blurry = max(M.eye_blurry, 15)
-			M.eye_blind = max(M.eye_blind, 5)
+			M.make_dizzy(6)
 		else
 			M.eye_blurry = max(M.eye_blurry, 25)
-			M.eye_blind = max(M.eye_blind, 10)
+			M.make_dizzy(12)
 
 	if(mouth_covered)
 		if(!message)
@@ -832,20 +833,28 @@
 		message = SPAN_DANGER("Your face and throat feel like it's being roasted to death!")
 		if(prob(25))
 			M.custom_emote(2, "[pick("coughs!","coughs hysterically!","splutters!")]")
-		M.Stun(5)
-		M.Weaken(5)
+		M.apply_effect(10, AGONY, 0)
 
 /datum/reagent/toxin/chlorobenzalmalononitrile/affect_ingest(mob/living/carbon/M, alien, effect_multiplier)
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(H.species && (H.species.flags & NO_PAIN))
 			return
+	if(dose < agony_dose)
+		if(prob(5) || dose == metabolism) //dose == metabolism is a very hacky way of forcing the message the first time this procs
+			to_chat(M, discomfort_message)
 	if(dose == metabolism)
 		to_chat(M, SPAN_DANGER("You feel the blood rushing through your veins like lava!"))
 	else
 		M.apply_effect(4, AGONY, 0)
 		if(prob(5))
-			M.visible_message("<span class='warning'>[M] [pick("dry heaves!","coughs!","splutters!")]</span>", SPAN_DANGER("You feel like your insides are burning!"))
+			M.visible_message("<span class='warning'>[M] [pick("dry heaves!","coughs!","splutters!")]</span>", SPAN_DANGER("You feel like your insides are melting!"))
 	if(isslime(M))
 		M.bodytemperature += rand(15, 30)
-	holder.remove_reagent("frostoil", 5)
+	holder.remove_reagent("tramadol", 5)
+
+/datum/reagent/toxin/chlorobenzalmalononitrile/overdose(mob/living/carbon/M, alien, effect_multiplier)
+	M.adjustOxyLoss(0.6 * effect_multiplier)
+	M.take_organ_damage(0.3 * effect_multiplier, 0)
+	if(M.losebreath < 15)
+		M.losebreath++
