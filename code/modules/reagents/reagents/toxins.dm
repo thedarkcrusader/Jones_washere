@@ -785,6 +785,67 @@
 	color = "#B31008"
 	agony_dose = 0.5
 	agony_amount = 4
-	discomfort_message = "<span class='danger'>You feel like your insides are burning!</span>"
+	discomfort_message = "<span class='danger'>You feel like the world is turning fuzzy</span>"
 
+/datum/reagent/toxin/chlorobenzalmalononitrile/affect_touch(mob/living/carbon/M, alien, effect_multiplier)
+	var/eyes_covered = 0
+	var/mouth_covered = 0
+	var/no_pain = 0
+	var/obj/item/eye_protection
+	var/obj/item/face_protection
 
+	var/list/protection
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
+		protection = list(H.head, H.glasses, H.wear_mask)
+		if(H.species && (H.species.flags & NO_PAIN))
+			no_pain = 1 //TODO: living-level can_feel_pain() proc
+	else
+		protection = list(M.wear_mask)
+
+	for(var/obj/item/I in protection)
+		if(I)
+			if(I.body_parts_covered & EYES)
+				eyes_covered = 1
+				eye_protection = I.name
+			if((I.body_parts_covered & FACE) && !(I.item_flags & FLEXIBLEMATERIAL))
+				mouth_covered = 1
+				face_protection = I.name
+
+	var/message
+	if(eyes_covered)
+		if(!mouth_covered)
+			message = SPAN_WARNING("Your [eye_protection] protects your eyes from the pepper spray!")
+	else
+		message = SPAN_WARNING("The pepperspray gets in your eyes!")
+		if(mouth_covered)
+			M.eye_blurry = max(M.eye_blurry, 15)
+			M.eye_blind = max(M.eye_blind, 5)
+		else
+			M.eye_blurry = max(M.eye_blurry, 25)
+			M.eye_blind = max(M.eye_blind, 10)
+
+	if(mouth_covered)
+		if(!message)
+			message = SPAN_WARNING("Your [face_protection] protects you from the pepper spray!")
+	else if(!no_pain)
+		message = SPAN_DANGER("Your face and throat burn!")
+		if(prob(25))
+			M.custom_emote(2, "[pick("coughs!","coughs hysterically!","splutters!")]")
+		M.Stun(5)
+		M.Weaken(5)
+
+/datum/reagent/toxin/chlorobenzalmalononitrile/affect_ingest(mob/living/carbon/M, alien, effect_multiplier)
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
+		if(H.species && (H.species.flags & NO_PAIN))
+			return
+	if(dose == metabolism)
+		to_chat(M, SPAN_DANGER("You feel like your insides are burning!"))
+	else
+		M.apply_effect(4, AGONY, 0)
+		if(prob(5))
+			M.visible_message("<span class='warning'>[M] [pick("dry heaves!","coughs!","splutters!")]</span>", SPAN_DANGER("You feel like your insides are burning!"))
+	if(isslime(M))
+		M.bodytemperature += rand(15, 30)
+	holder.remove_reagent("frostoil", 5)
