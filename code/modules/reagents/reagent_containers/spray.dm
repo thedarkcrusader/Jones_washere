@@ -149,6 +149,17 @@
 		return
 	..()
 
+/obj/item/reagent_containers/spray/pepper/nervegas
+	name = "Nerve gas"
+	desc = "Manufactured by Seinemetall Defense GmbH, used to blind and down an opponent quickly."
+	icon = 'icons/obj/weapons.dmi'
+	icon_state = "pepperspray"
+	item_state = "pepperspray"
+	possible_transfer_amounts = null
+	volume = 100
+	var/safety = 1
+	preloaded_reagents = list("chlorobenzalmalononitrile" = 100)
+
 /obj/item/reagent_containers/spray/waterflower
 	name = "water flower"
 	desc = "A seemingly innocent sunflower...with a twist."
