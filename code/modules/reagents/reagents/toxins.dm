@@ -778,11 +778,10 @@
 	name = "CS powder"
 	id = "chlorobenzalmalononitrile"
 	description = "A Nerve-Agent that works similar to Pepper Spray but higher in potency."
-	taste_description = "the Sun's piss"
+	taste_description = "satan's piss"
 	taste_mult = 10
 	reagent_state = LIQUID
-	overdose= REAGENT_OVERDOSE
-	touch_met = 30
+	touch_met = 50 // Get rid of it quickly
 	color = "#B31008"
 	agony_dose = 0.5
 	agony_amount = 4
@@ -821,10 +820,10 @@
 		message = SPAN_WARNING("YOUR EYES ARE BURNING!!")
 		if(mouth_covered)
 			M.eye_blurry = max(M.eye_blurry, 15)
-			M.make_dizzy(6)
+			M.eye_blind = max(M.eye_blind, 5)
 		else
 			M.eye_blurry = max(M.eye_blurry, 25)
-			M.make_dizzy(12)
+			M.eye_blind = max(M.eye_blind, 10)
 
 	if(mouth_covered)
 		if(!message)
@@ -833,7 +832,8 @@
 		message = SPAN_DANGER("Your face and throat feel like it's being roasted to death!")
 		if(prob(25))
 			M.custom_emote(2, "[pick("coughs!","coughs hysterically!","splutters!")]")
-		M.apply_effect(10, AGONY, 0)
+		M.Stun(5)
+		M.Weaken(5)
 
 /datum/reagent/toxin/chlorobenzalmalononitrile/affect_ingest(mob/living/carbon/M, alien, effect_multiplier)
 	if(ishuman(M))
@@ -845,13 +845,7 @@
 	else
 		M.apply_effect(4, AGONY, 0)
 		if(prob(5))
-			M.visible_message("<span class='warning'>[M] [pick("dry heaves!","coughs!","splutters!")]</span>", SPAN_DANGER("You feel like your insides are melting!"))
+			M.visible_message("<span class='warning'>[M] [pick("dry heaves!","coughs!","splutters!")]</span>", SPAN_DANGER("You feel like your insides are burning!"))
 	if(isslime(M))
 		M.bodytemperature += rand(15, 30)
-	holder.remove_reagent("tramadol", 5)
-
-/datum/reagent/toxin/chlorobenzalmalononitrile/overdose(mob/living/carbon/M, alien, effect_multiplier)
-	M.adjustOxyLoss(0.6 * effect_multiplier)
-	M.take_organ_damage(0.3 * effect_multiplier, 0)
-	if(M.losebreath < 15)
-		M.losebreath++
+	holder.remove_reagent("frostoil", 5)
