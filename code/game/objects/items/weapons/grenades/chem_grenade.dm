@@ -375,7 +375,7 @@
 	stage = READY
 	path = 1
 
-/obj/item/grenade/chem_grenade/teargas/Initialize()
+/obj/item/grenade/chem_grenade/nervegas/Initialize()
 	. = ..()
 	var/obj/item/reagent_containers/glass/beaker/large/B1 = new(src)
 	var/obj/item/reagent_containers/glass/beaker/large/B2 = new(src)
