@@ -772,3 +772,19 @@
 	if(istype(L))
 		L.adjustHalLoss(50)
 		L.adjustToxLoss(20)
+
+//Custom Chem Sir made me do to learn Chem Code
+/datum/reagent/toxin/chlorobenzalmalononitrile
+	name = "CS powder"
+	id = "chlorobenzalmalononitrile"
+	description = "A Nerve-Agent that works similar to Pepper Spray but higher in potency."
+	taste_description = "satan's piss"
+	taste_mult = 10
+	reagent_state = LIQUID
+	touch_met = 50 // Get rid of it quickly
+	color = "#B31008"
+	agony_dose = 0.5
+	agony_amount = 4
+	discomfort_message = "<span class='danger'>You feel like your insides are burning!</span>"
+
+
