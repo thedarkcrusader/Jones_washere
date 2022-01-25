@@ -773,23 +773,22 @@
 		L.adjustHalLoss(50)
 		L.adjustToxLoss(20)
 
-//Custom Chem Sir made me do to learn Chem Code, also here cause it's Toxins in function
-
-/datum/reagent/organic/chlorobenzalmalononitrile
+//Custom Chem Sir made me do to learn Chem Code
+/datum/reagent/toxin/chlorobenzalmalononitrile
 	name = "CS powder"
 	id = "chlorobenzalmalononitrile"
 	description = "A Nerve-Agent that works similar to Pepper Spray but higher in potency."
 	taste_description = "the Sun's piss"
 	taste_mult = 10
 	reagent_state = LIQUID
-	touch_met = 10
+	touch_met = 30
 	overdose = REAGENTS_OVERDOSE
 	color = "#545454"
 	var/agony_dose = 0.5
 	var/agony_amount = 4
 	var/discomfort_message = "<span class='danger'>You feel like the world is turning fuzzy</span>"
 
-/datum/reagent/organic/chlorobenzalmalononitrile/affect_touch(mob/living/carbon/M, alien, effect_multiplier)
+/datum/reagent/toxin/chlorobenzalmalononitrile/affect_touch(mob/living/carbon/M, alien, effect_multiplier)
 	var/eyes_covered = 0
 	var/mouth_covered = 0
 	var/no_pain = 0
@@ -822,12 +821,11 @@
 		message = SPAN_WARNING("YOUR EYES ARE BURNING!!")
 		if(mouth_covered)
 			M.eye_blurry = max(M.eye_blurry, 15)
-			M.stats.addTempStat(STAT_ROB, -STAT_LEVEL_BASIC, STIM_TIME, "chlorobenzalmalononitrile")
-			M.shakecamera = 4
+			M.make_dizzy(6 * effect_multiplier)
 		else
 			M.eye_blurry = max(M.eye_blurry, 25)
-			M.stats.addTempStat(STAT_ROB, -STAT_LEVEL_BASIC, STIM_TIME, "chlorobenzalmalononitrile")
-			M.shakecamera = 4
+			M.make_dizzy(12 * effect_multiplier)
+
 	if(mouth_covered)
 		if(!message)
 			message = SPAN_WARNING("Your [face_protection] protects you from the nerve gas agent!")
@@ -837,7 +835,7 @@
 			M.custom_emote(2, "[pick("coughs!","coughs hysterically!","splutters!")]")
 		M.apply_effect(30, AGONY, 0)
 
-/datum/reagent/organic/chlorobenzalmalononitrile/affect_ingest(mob/living/carbon/M, alien, effect_multiplier)
+/datum/reagent/toxin/chlorobenzalmalononitrile/affect_ingest(mob/living/carbon/M, alien, effect_multiplier)
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(H.species && (H.species.flags & NO_PAIN))
@@ -855,8 +853,8 @@
 		M.bodytemperature += rand(15, 30)
 	holder.remove_reagent("tramadol", 5)
 
-/datum/reagent/organic/chlorobenzalmalononitrile/overdose(mob/living/carbon/M, alien, effect_multiplier)
-	M.adjustOxyLoss(10 * effect_multiplier)
-	M.take_organ_damage(10 * effect_multiplier, 0)
+/datum/reagent/toxin/chlorobenzalmalononitrile/overdose(mob/living/carbon/M, alien, effect_multiplier)
+	M.adjustOxyLoss(5 * effect_multiplier)
+	M.take_organ_damage(5 * effect_multiplier, 0)
 	if(M.losebreath < 15)
 		M.losebreath++
