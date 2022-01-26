@@ -35,8 +35,7 @@
 	var/pierce_multiplier = 0 //ADDITIVE wall penetration to projectiles fired from this gun
 	var/extra_damage_mult_scoped = 0 //Adds even more damage mulitplier, when scopped so snipers can sniper
 	var/proj_agony_multiplier = 1
-
-/*awdaw*/
+	var/burst = 1
 	var/fire_delay = 6 	//delay after shooting before the gun can be used again
 	var/burst_delay = 2	//delay between shots, if firing in bursts
 	var/move_delay = 1
@@ -868,14 +867,12 @@
 	auto_eject = initial(auto_eject) //SoJ edit
 	initialize_scope()
 	initialize_firemodes()
-
 	//Lets get are prefixes and name fresh
 	name = initial(name)
 	max_upgrades = initial(max_upgrades)
 	color = initial(color)
 	prefixes = list()
 	item_flags = initial(item_flags)
-
 	extra_bulk = initial(extra_bulk)
 
 	//Now lets have each upgrade reapply its modifications
@@ -891,21 +888,6 @@
 	update_icon()
 	//then update any UIs with the new stats
 	SSnano.update_uis(src)
-/*
-/obj/item/gun/zoom(tileoffset, viewsize)
-	..()
-	if(!ishuman(usr))
-		return
-	var/mob/living/carbon/human/H = usr
-	if(zoom)
-		H.using_scope = src
-		damage_multiplier += extra_damage_mult_scoped
-	else
-		H.using_scope = null
-		refresh_upgrades()
-		if(folding_stock)
-			fold(span_chat = FALSE) //If we have a stock lets not remove all are boons cuz we looked down a scope
-*/
 
 /obj/item/gun/zoom(tileoffset, viewsize)
 	..()
@@ -926,4 +908,3 @@
 	if(!zoom_factor && !(slot_flags & SLOT_HOLSTER))
 		gun_tags |= GUN_SCOPE
 */
-
