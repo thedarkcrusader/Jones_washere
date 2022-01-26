@@ -278,15 +278,13 @@
 /mob/proc/CtrlClickOn(var/atom/A)
 	A.CtrlClick(src)
 	return
-
 /atom/proc/CtrlClick(var/mob/user)
-	SEND_SIGNAL(src, COMSIG_CLICK_CTRL, user)
 	return
 
 /atom/movable/CtrlClick(var/mob/user)
-	if(Adjacent(user) && loc != user) //cant pull things on yourself
+	if(Adjacent(user))
 		user.start_pulling(src)
-	..()
+
 /*
 	Alt click
 	Unused except for AI

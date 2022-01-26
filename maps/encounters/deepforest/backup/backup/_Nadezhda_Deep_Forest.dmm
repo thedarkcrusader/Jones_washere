@@ -45,7 +45,7 @@
 /turf/simulated/floor/tiled/derelict/red_white_edges,
 /area/nadezhda/outside/one_star)
 "am" = (
-/mob/living/carbon/superior_animal/human/voidwolf/ranged,
+/mob/living/simple_animal/hostile/voidwolf/ranged,
 /turf/simulated/floor/wood/wild5,
 /area/nadezhda/outside/meadow)
 "an" = (
@@ -781,8 +781,8 @@
 /area/nadezhda/dungeon/outside/smuggler_zone_u)
 "dq" = (
 /obj/machinery/sleeper{
-	dir = 4;
-	icon_state = "sleeper_0"
+	icon_state = "sleeper_0";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/nadezhda/dungeon/outside/smuggler_zone_u)
@@ -1639,7 +1639,7 @@
 /turf/simulated/mineral/planet,
 /area/asteroid/rogue)
 "gv" = (
-/mob/living/carbon/superior_animal/human/voidwolf/captain,
+/mob/living/simple_animal/hostile/voidwolf/captain,
 /turf/simulated/floor/carpet/turcarpet,
 /area/nadezhda/dungeon/outside/smuggler_zone)
 "gw" = (
@@ -4096,7 +4096,7 @@
 /obj/structure/bed/chair/custom/onestar/red{
 	dir = 4
 	},
-/mob/living/carbon/superior_animal/robot/greyson/custodian/chef,
+/mob/living/simple_animal/hostile/onestar_custodian/chef,
 /turf/simulated/floor/tiled/derelict/red_white_edges,
 /area/nadezhda/outside/one_star)
 "pa" = (
@@ -4130,7 +4130,7 @@
 "pg" = (
 /obj/structure/table/plasmaglass,
 /obj/machinery/light,
-/obj/item/gun/projectile/grenade/lenar,
+/obj/item/gun/launcher/grenade/lenar,
 /turf/simulated/floor/tiled/dark/danger,
 /area/nadezhda/dungeon/outside/prepper)
 "ph" = (
@@ -4246,7 +4246,7 @@
 /turf/simulated/floor/beach/sand/desert,
 /area/nadezhda/dungeon/outside/zoo)
 "pD" = (
-/obj/item/clothing/head/helmet/faceshield/riot,
+/obj/item/clothing/head/helmet/riot,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/beach/sand/desert,
 /area/nadezhda/dungeon/outside/zoo)
@@ -4309,7 +4309,7 @@
 /turf/simulated/floor/tiled/derelict/red_white_edges,
 /area/nadezhda/outside/one_star)
 "pR" = (
-/mob/living/carbon/superior_animal/robot/greyson/custodian/engineer,
+/mob/living/simple_animal/hostile/onestar_custodian/engineer,
 /turf/simulated/floor/tiled/derelict/red_white_edges,
 /area/nadezhda/outside/one_star)
 "pS" = (
@@ -4333,7 +4333,7 @@
 /turf/simulated/floor/tiled/derelict/white_big_edges,
 /area/nadezhda/outside/one_star)
 "pV" = (
-/mob/living/carbon/superior_animal/robot/greyson/roomba,
+/mob/living/simple_animal/hostile/roomba,
 /turf/simulated/floor/tiled/derelict/white_red_edges,
 /area/nadezhda/outside/one_star)
 "pW" = (
@@ -4373,11 +4373,11 @@
 /turf/simulated/floor/tiled/derelict/white_small_edges,
 /area/nadezhda/outside/one_star)
 "qa" = (
-/mob/living/carbon/superior_animal/robot/greyson/custodian/chef,
+/mob/living/simple_animal/hostile/onestar_custodian/chef,
 /turf/simulated/floor/tiled/derelict,
 /area/nadezhda/outside/one_star)
 "qb" = (
-/mob/living/carbon/superior_animal/robot/greyson/roomba/gun_ba,
+/mob/living/simple_animal/hostile/roomba/gun_ba,
 /turf/simulated/floor/tiled/derelict/red_white_edges,
 /area/nadezhda/outside/one_star)
 "qc" = (
@@ -4401,7 +4401,7 @@
 /turf/simulated/floor/tiled/derelict/white_small_edges,
 /area/nadezhda/outside/one_star)
 "qf" = (
-/mob/living/carbon/superior_animal/robot/greyson/synthetic,
+/mob/living/simple_animal/hostile/roomba/synthetic,
 /turf/simulated/floor/tiled/derelict/white_big_edges,
 /area/nadezhda/outside/one_star)
 "qg" = (
@@ -4537,7 +4537,7 @@
 /turf/simulated/floor/tiled/derelict/white_big_edges,
 /area/nadezhda/outside/one_star)
 "qD" = (
-/mob/living/carbon/superior_animal/robot/greyson/roomba/boomba,
+/mob/living/simple_animal/hostile/roomba/boomba,
 /turf/simulated/floor/tiled/derelict/white_red_edges,
 /area/nadezhda/outside/one_star)
 "qE" = (
@@ -4565,7 +4565,7 @@
 /turf/simulated/floor/tiled/derelict/white_big_edges,
 /area/nadezhda/outside/one_star)
 "qJ" = (
-/mob/living/carbon/superior_animal/robot/greyson/roomba/gun_ba,
+/mob/living/simple_animal/hostile/roomba/gun_ba,
 /turf/simulated/floor/tiled/derelict,
 /area/nadezhda/outside/one_star)
 "qK" = (
@@ -4589,7 +4589,7 @@
 /turf/simulated/floor/tiled/derelict/white_small_edges,
 /area/nadezhda/outside/one_star)
 "qN" = (
-/mob/living/carbon/superior_animal/robot/greyson/roomba/gun_ba,
+/mob/living/simple_animal/hostile/roomba/gun_ba,
 /turf/simulated/floor/tiled/derelict/white_big_edges,
 /area/nadezhda/outside/one_star)
 "qO" = (
@@ -4656,7 +4656,7 @@
 /turf/simulated/floor/tiled/derelict/white_small_edges,
 /area/nadezhda/outside/one_star)
 "qZ" = (
-/mob/living/carbon/superior_animal/robot/greyson/custodian,
+/mob/living/simple_animal/hostile/onestar_custodian,
 /turf/simulated/floor/tiled/derelict/white_red_edges,
 /area/nadezhda/outside/one_star)
 "ra" = (
@@ -4666,7 +4666,7 @@
 /turf/simulated/floor/tiled/derelict/red_white_edges,
 /area/nadezhda/outside/one_star)
 "rb" = (
-/mob/living/carbon/superior_animal/robot/greyson/roomba/slayer,
+/mob/living/simple_animal/hostile/roomba/slayer,
 /turf/simulated/floor/tiled/derelict/white_red_edges,
 /area/nadezhda/outside/one_star)
 "rc" = (
@@ -4692,15 +4692,15 @@
 /turf/simulated/floor/tiled/derelict/white_small_edges,
 /area/nadezhda/outside/one_star)
 "rg" = (
-/mob/living/carbon/superior_animal/robot/greyson/custodian,
+/mob/living/simple_animal/hostile/onestar_custodian,
 /turf/simulated/floor/tiled/derelict/white_small_edges,
 /area/nadezhda/outside/one_star)
 "rh" = (
-/mob/living/carbon/superior_animal/robot/greyson/custodian/engineer,
+/mob/living/simple_animal/hostile/onestar_custodian/engineer,
 /turf/simulated/floor/tiled/derelict/red_white_edges,
 /area/asteroid/rogue)
 "ri" = (
-/mob/living/carbon/superior_animal/robot/greyson/roomba/gun_ba,
+/mob/living/simple_animal/hostile/roomba/gun_ba,
 /turf/simulated/floor/tiled/derelict/red_white_edges,
 /area/asteroid/rogue)
 "rj" = (
@@ -4761,7 +4761,7 @@
 /turf/simulated/floor/asteroid/dirt,
 /area/nadezhda/outside/one_star)
 "ru" = (
-/mob/living/carbon/superior_animal/robot/greyson/custodian/engineer,
+/mob/living/simple_animal/hostile/onestar_custodian/engineer,
 /turf/simulated/floor/tiled/derelict/white_red_edges,
 /area/nadezhda/outside/one_star)
 "rv" = (
@@ -4833,7 +4833,7 @@
 /turf/simulated/floor/tiled/derelict/white_small_edges,
 /area/nadezhda/outside/one_star)
 "rK" = (
-/mob/living/carbon/superior_animal/robot/greyson/roomba/gun_ba,
+/mob/living/simple_animal/hostile/roomba/gun_ba,
 /turf/simulated/floor/tiled/derelict/white_red_edges,
 /area/nadezhda/outside/one_star)
 "rL" = (
@@ -4916,7 +4916,7 @@
 /area/nadezhda/outside/one_star)
 "sc" = (
 /obj/structure/bed/chair/custom/onestar,
-/mob/living/carbon/superior_animal/robot/greyson/roomba/slayer,
+/mob/living/simple_animal/hostile/roomba/slayer,
 /turf/simulated/floor/tiled/derelict/white_red_edges,
 /area/nadezhda/outside/one_star)
 "sd" = (
@@ -4974,7 +4974,7 @@
 /area/nadezhda/outside/one_star)
 "sn" = (
 /obj/structure/catwalk,
-/mob/living/carbon/superior_animal/robot/greyson/custodian,
+/mob/living/simple_animal/hostile/onestar_custodian,
 /turf/simulated/floor/plating/under,
 /area/nadezhda/outside/one_star)
 "so" = (
@@ -5619,7 +5619,7 @@
 /turf/simulated/floor/wood,
 /area/nadezhda/dungeon/outside/smuggler_zone)
 "uG" = (
-/mob/living/carbon/superior_animal/human/voidwolf,
+/mob/living/simple_animal/hostile/voidwolf,
 /turf/simulated/floor/asteroid/grass,
 /area/nadezhda/outside/meadow)
 "uH" = (
@@ -6551,7 +6551,7 @@
 /turf/simulated/floor/wood/wild5,
 /area/nadezhda/dungeon/outside/smuggler_zone)
 "xL" = (
-/mob/living/carbon/superior_animal/human/voidwolf,
+/mob/living/simple_animal/hostile/voidwolf,
 /turf/simulated/floor/asteroid/dirt,
 /area/nadezhda/outside/meadow)
 "xM" = (
@@ -9587,7 +9587,7 @@
 /area/asteroid/rogue)
 "JK" = (
 /obj/machinery/light/floor,
-/mob/living/carbon/superior_animal/robot/greyson/roomba/gun_ba,
+/mob/living/simple_animal/hostile/roomba/gun_ba,
 /turf/simulated/floor/tiled/steel/brown_perforated,
 /area/nadezhda/outside/one_star)
 "JL" = (
@@ -9615,11 +9615,11 @@
 /turf/simulated/floor/wood/wild5,
 /area/nadezhda/dungeon/outside/smuggler_zone_u)
 "JQ" = (
-/mob/living/carbon/superior_animal/human/voidwolf/fieldtech,
+/mob/living/simple_animal/hostile/voidwolf/fieldtech,
 /turf/simulated/floor/wood/wild5,
 /area/nadezhda/dungeon/outside/smuggler_zone_u)
 "JR" = (
-/mob/living/carbon/superior_animal/human/voidwolf/fieldtech/ranged,
+/mob/living/simple_animal/hostile/voidwolf/fieldtech/ranged,
 /turf/simulated/floor/wood/wild5,
 /area/nadezhda/dungeon/outside/smuggler_zone_u)
 "JS" = (
@@ -9698,7 +9698,7 @@
 /turf/simulated/floor/tiled/derelict/white_small_edges,
 /area/nadezhda/outside/one_star)
 "Ki" = (
-/mob/living/carbon/superior_animal/robot/greyson/custodian,
+/mob/living/simple_animal/hostile/onestar_custodian,
 /turf/simulated/floor/tiled/derelict,
 /area/nadezhda/outside/one_star)
 "Kj" = (
@@ -9798,7 +9798,7 @@
 /turf/simulated/floor/plating/under,
 /area/nadezhda/outside/one_star)
 "KE" = (
-/mob/living/carbon/superior_animal/robot/greyson/synthetic/epistol,
+/mob/living/simple_animal/hostile/roomba/synthetic/epistol,
 /turf/simulated/floor/tiled/derelict/white_big_edges,
 /area/nadezhda/outside/one_star)
 "KF" = (
@@ -9815,30 +9815,30 @@
 /turf/simulated/floor/tiled/derelict,
 /area/nadezhda/outside/one_star)
 "KH" = (
-/mob/living/carbon/superior_animal/robot/greyson/synthetic/epistol/rifle,
+/mob/living/simple_animal/hostile/roomba/synthetic/epistol/rifle,
 /turf/simulated/floor/tiled/derelict/white_big_edges,
 /area/nadezhda/outside/one_star)
 "KI" = (
-/mob/living/carbon/superior_animal/robot/greyson/synthetic/epistol/heavy,
+/mob/living/simple_animal/hostile/roomba/synthetic/epistol/heavy,
 /turf/simulated/floor/tiled/derelict/red_white_edges,
 /area/asteroid/rogue)
 "KJ" = (
-/mob/living/carbon/superior_animal/robot/greyson/synthetic/epistol/rifle,
+/mob/living/simple_animal/hostile/roomba/synthetic/epistol/rifle,
 /turf/simulated/floor/tiled/derelict/red_white_edges,
 /area/asteroid/rogue)
 "KK" = (
 /obj/structure/bed/chair/custom/onestar/red{
 	dir = 4
 	},
-/mob/living/carbon/superior_animal/robot/greyson/synthetic/epistol,
+/mob/living/simple_animal/hostile/roomba/synthetic/epistol,
 /turf/simulated/floor/tiled/derelict,
 /area/nadezhda/outside/one_star)
 "KL" = (
-/mob/living/carbon/superior_animal/robot/greyson/synthetic/epistol,
+/mob/living/simple_animal/hostile/roomba/synthetic/epistol,
 /turf/simulated/floor/tiled/derelict,
 /area/nadezhda/outside/one_star)
 "KM" = (
-/mob/living/carbon/superior_animal/robot/greyson/synthetic/epistol/esmg,
+/mob/living/simple_animal/hostile/roomba/synthetic/epistol/esmg,
 /turf/simulated/floor/tiled/derelict,
 /area/nadezhda/outside/one_star)
 "KN" = (
@@ -9849,7 +9849,7 @@
 /area/nadezhda/outside/one_star)
 "KO" = (
 /obj/structure/bed/chair/custom/onestar,
-/mob/living/carbon/superior_animal/robot/greyson/synthetic,
+/mob/living/simple_animal/hostile/roomba/synthetic,
 /turf/simulated/floor/tiled/derelict/white_small_edges,
 /area/nadezhda/outside/one_star)
 "KP" = (
@@ -9859,7 +9859,7 @@
 /area/nadezhda/outside/one_star)
 "KQ" = (
 /obj/structure/bed/chair/custom/onestar/red,
-/mob/living/carbon/superior_animal/robot/greyson/synthetic,
+/mob/living/simple_animal/hostile/roomba/synthetic,
 /turf/simulated/floor/tiled/derelict/white_small_edges,
 /area/nadezhda/outside/one_star)
 "KR" = (
@@ -9873,7 +9873,7 @@
 /obj/structure/bed/chair/custom/onestar/red{
 	dir = 4
 	},
-/mob/living/carbon/superior_animal/robot/greyson/synthetic/epistol/esmg,
+/mob/living/simple_animal/hostile/roomba/synthetic/epistol/esmg,
 /turf/simulated/floor/tiled/derelict,
 /area/nadezhda/outside/one_star)
 "KT" = (
@@ -9882,15 +9882,15 @@
 /turf/simulated/floor/tiled/derelict,
 /area/nadezhda/outside/one_star)
 "KU" = (
-/mob/living/carbon/superior_animal/robot/greyson/synthetic/epistol/heavy,
+/mob/living/simple_animal/hostile/roomba/synthetic/epistol/heavy,
 /turf/simulated/floor/tiled/derelict/red_white_edges,
 /area/nadezhda/outside/one_star)
 "KV" = (
-/mob/living/carbon/superior_animal/robot/greyson/synthetic/epistol/rifle,
+/mob/living/simple_animal/hostile/roomba/synthetic/epistol/rifle,
 /turf/simulated/floor/tiled/derelict,
 /area/nadezhda/outside/one_star)
 "KW" = (
-/mob/living/carbon/superior_animal/robot/greyson/synthetic/epistol,
+/mob/living/simple_animal/hostile/roomba/synthetic/epistol,
 /turf/simulated/floor/tiled/derelict/white_small_edges,
 /area/nadezhda/outside/one_star)
 "KX" = (
@@ -9900,32 +9900,32 @@
 /turf/simulated/floor/tiled/derelict/white_small_edges,
 /area/nadezhda/outside/one_star)
 "KY" = (
-/mob/living/carbon/superior_animal/robot/greyson/synthetic/epistol,
+/mob/living/simple_animal/hostile/roomba/synthetic/epistol,
 /turf/simulated/floor/tiled/derelict/white_red_edges,
 /area/nadezhda/outside/one_star)
 "KZ" = (
-/mob/living/carbon/superior_animal/robot/greyson/synthetic,
+/mob/living/simple_animal/hostile/roomba/synthetic,
 /turf/simulated/floor/tiled/derelict,
 /area/nadezhda/outside/one_star)
 "La" = (
 /obj/structure/bed/chair/custom/onestar,
-/mob/living/carbon/superior_animal/robot/greyson/synthetic,
+/mob/living/simple_animal/hostile/roomba/synthetic,
 /turf/simulated/floor/tiled/derelict,
 /area/nadezhda/outside/one_star)
 "Lb" = (
-/mob/living/carbon/superior_animal/robot/greyson/synthetic/epistol/rifle,
+/mob/living/simple_animal/hostile/roomba/synthetic/epistol/rifle,
 /turf/simulated/floor/tiled/derelict/white_red_edges,
 /area/nadezhda/outside/one_star)
 "Lc" = (
-/mob/living/carbon/superior_animal/robot/greyson/synthetic/epistol/rifle,
+/mob/living/simple_animal/hostile/roomba/synthetic/epistol/rifle,
 /turf/simulated/floor/tiled/derelict/red_white_edges,
 /area/nadezhda/outside/one_star)
 "Ld" = (
-/mob/living/carbon/superior_animal/robot/greyson/synthetic/epistol/heavy,
+/mob/living/simple_animal/hostile/roomba/synthetic/epistol/heavy,
 /turf/simulated/floor/tiled/derelict/white_small_edges,
 /area/nadezhda/outside/one_star)
 "Le" = (
-/mob/living/carbon/superior_animal/robot/greyson/synthetic/epistol/esmg,
+/mob/living/simple_animal/hostile/roomba/synthetic/epistol/esmg,
 /turf/simulated/floor/tiled/derelict/white_red_edges,
 /area/nadezhda/outside/one_star)
 "Lf" = (
@@ -10240,9 +10240,9 @@
 /area/nadezhda/outside/one_star)
 "Nu" = (
 /obj/machinery/door/airlock/multi_tile/metal{
-	dir = 2;
 	locked = 1;
-	name = "Grayson Positronic Outpost"
+	name = "Grayson Positronic Outpost";
+	dir = 2
 	},
 /turf/simulated/floor/tiled/derelict/white_small_edges,
 /area/nadezhda/outside/one_star)
@@ -10275,9 +10275,9 @@
 /area/nadezhda/outside/one_star)
 "NT" = (
 /obj/machinery/door/airlock/multi_tile/metal{
-	dir = 2;
 	locked = 1;
-	name = "Grayson Positronic Outpost"
+	name = "Grayson Positronic Outpost";
+	dir = 2
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/under,
@@ -10429,7 +10429,7 @@
 "Qo" = (
 /obj/structure/catwalk,
 /obj/structure/catwalk,
-/mob/living/carbon/superior_animal/robot/greyson/roomba/gun_ba,
+/mob/living/simple_animal/hostile/roomba/gun_ba,
 /turf/simulated/floor/plating/under,
 /area/nadezhda/outside/one_star)
 "Qr" = (
@@ -10462,7 +10462,7 @@
 /area/nadezhda/outside/one_star)
 "QU" = (
 /obj/structure/catwalk,
-/mob/living/carbon/superior_animal/robot/greyson/roomba/gun_ba,
+/mob/living/simple_animal/hostile/roomba/gun_ba,
 /turf/simulated/floor/plating/under,
 /area/nadezhda/outside/one_star)
 "Re" = (
@@ -10643,7 +10643,7 @@
 /area/nadezhda/outside/one_star)
 "UD" = (
 /obj/machinery/papershredder,
-/mob/living/carbon/superior_animal/robot/greyson/custodian/chef,
+/mob/living/simple_animal/hostile/onestar_custodian/chef,
 /turf/simulated/floor/tiled/derelict,
 /area/nadezhda/outside/one_star)
 "UF" = (
@@ -10785,9 +10785,9 @@
 /area/nadezhda/outside/one_star)
 "WH" = (
 /obj/machinery/door/airlock/multi_tile/metal{
-	dir = 2;
 	locked = 1;
-	name = "Grayson Positronic Outpost"
+	name = "Grayson Positronic Outpost";
+	dir = 2
 	},
 /turf/simulated/floor/plating/under,
 /area/nadezhda/outside/one_star)
@@ -10857,7 +10857,7 @@
 /turf/simulated/floor/asteroid/grass,
 /area/nadezhda/outside/meadow)
 "Ya" = (
-/mob/living/carbon/superior_animal/robot/greyson/roomba/slayer,
+/mob/living/simple_animal/hostile/roomba/slayer,
 /turf/simulated/floor/tiled/derelict,
 /area/nadezhda/outside/one_star)
 "Yb" = (
@@ -10879,7 +10879,7 @@
 "Yl" = (
 /obj/structure/catwalk,
 /obj/structure/catwalk,
-/mob/living/carbon/superior_animal/robot/greyson/custodian,
+/mob/living/simple_animal/hostile/onestar_custodian,
 /turf/simulated/floor/plating/under,
 /area/nadezhda/outside/one_star)
 "Yn" = (
