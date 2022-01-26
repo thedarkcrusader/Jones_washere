@@ -258,5 +258,3 @@
 /obj/proc/multiply_pierce_penetration(var/newmult)
 
 /obj/proc/multiply_projectile_step_delay(var/newmult)
-
-/obj/proc/multiply_projectile_agony(newmult)

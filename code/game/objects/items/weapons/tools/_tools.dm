@@ -61,7 +61,6 @@
 	var/precision = 0	//Subtracted from failure rates
 	var/workspeed = 1	//Worktimes are divided by this
 
-
 /******************************
 	/* Core Procs */
 *******************************/

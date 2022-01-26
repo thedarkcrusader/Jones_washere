@@ -1,7 +1,3 @@
-/obj/item/gun/energy/sst/Initialize()
-	. = ..()
-	src.transform *= 0.65
-
 /obj/item/gun/energy/sst
 	name = "\"SST Abnegate\" handgun"
 	desc = "\"Soteria Surface Tension\" brand handgun. A cooperative project between Soteria Medical and Soteria Research, the Abnegate uses Greyson tech to internally synthesize soporific coated .35 calliber bullets. \
@@ -11,7 +7,7 @@
 	item_state = "abnegate"
 	fire_sound = 'sound/weapons/guns/fire/pistol_fire.ogg'
 	slot_flags = SLOT_BELT|SLOT_HOLSTER
-	w_class = ITEM_SIZE_NORMAL
+	w_class = ITEM_SIZE_NORMAL + 0.2
 	force = WEAPON_FORCE_NORMAL
 	origin_tech = list(TECH_COMBAT = 10)
 	matter = list(MATERIAL_PLASTEEL = 12, MATERIAL_STEEL = 8, MATERIAL_SILVER = 8, MATERIAL_PLATINUM = 2)
@@ -34,36 +30,17 @@
 	icon_state = "format_bound"
 	item_state = "format_bound"
 	fire_sound = 'sound/weapons/guns/fire/pistol_fire.ogg'
-	charge_cost = 100
+	charge_cost = 150
 	gun_tags = list(GUN_PROJECTILE, GUN_LASER, GUN_ENERGY)
 	suitable_cell = /obj/item/cell/medium
 	fire_delay = 12
 	recoil_buildup = 6
-	can_dual = TRUE
+	can_dual = FALSE
 	damage_multiplier = 1.3
-	w_class = ITEM_SIZE_NORMAL
-	projectile_type = /obj/item/projectile/bullet/magnum_40/rubber/soporific
+	w_class = ITEM_SIZE_NORMAL + 0.3
+	projectile_type=/obj/item/projectile/bullet/magnun_40/rubber/soporific
 	matter = list(MATERIAL_PLASTEEL = 18, MATERIAL_STEEL = 10,  MATERIAL_SILVER = 12, MATERIAL_PLATINUM = 5)
 	price_tag = 1600
-
-//Had to put this here because some it fucking loads before the bullet types
-/obj/item/projectile/bullet/magnum_40/rubber/soporific
-	name = "soporific coated rubber bullet"
-
-/obj/item/projectile/bullet/magnum_40/rubber/soporific/on_hit(atom/target, def_zone = null)
-	if(isliving(target))
-		var/mob/living/L = target
-		if(istype(L) && L.reagents)
-			L.reagents.add_reagent("stoxin", 3)
-
-
-/obj/item/gun/energy/sst/formatbound/preloaded
-
-/obj/item/gun/energy/sst/formatbound/preloaded/New()
-	cell = new /obj/item/cell/medium/moebius/high(src)
-	. = ..()
-	update_icon()
-
 
 /obj/item/gun/energy/sst/humility
 	name = "\"SST Humility\" shotgun"
@@ -73,7 +50,7 @@
 	wielded_item_state = "_doble"
 	icon_state = "humility"
 	item_state = "humility"
-	charge_cost = 500
+	charge_cost = 800
 	fire_sound = 'sound/weapons/guns/fire/shotgunp_fire.ogg'
 	gun_tags = list(GUN_PROJECTILE, GUN_LASER, GUN_ENERGY)
 	w_class = ITEM_SIZE_HUGE
@@ -115,7 +92,7 @@
 	price_tag = 3200
 	charge_meter = FALSE
 	slot_flags = SLOT_BACK
-	charge_cost = 300
+	charge_cost = 450
 	suitable_cell = /obj/item/cell/large
 	recoil_buildup = 2
 	can_dual = FALSE
