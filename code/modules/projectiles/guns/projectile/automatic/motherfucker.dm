@@ -43,3 +43,4 @@
 /obj/item/gun/projectile/automatic/motherfucker/handle_post_fire(mob/user)
 	..()
 	pumped = FALSE
+/*@FAW*/
