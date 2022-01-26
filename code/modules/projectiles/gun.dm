@@ -781,7 +781,7 @@
 	data["recoil_buildup_max"] = initial(recoil_buildup)*10
 
 	data["extra_volume"] = extra_bulk
-  
+
 	data["upgrades_max"] = max_upgrades
 
 	data += ui_data_projectile(get_dud_projectile())
@@ -926,3 +926,4 @@
 	if(!zoom_factor && !(slot_flags & SLOT_HOLSTER))
 		gun_tags |= GUN_SCOPE
 */
+
