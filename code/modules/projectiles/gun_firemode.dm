@@ -7,6 +7,7 @@
 */
 /datum/firemode
 	var/name = "default"
+	var/desc = "The default firemode"
 	var/icon_state
 	var/list/settings = list()
 	var/obj/item/gun/gun = null

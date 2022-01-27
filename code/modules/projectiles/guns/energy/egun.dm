@@ -17,8 +17,8 @@
 	item_modifystate = "stun"
 
 	init_firemodes = list(
-		list(mode_name="stun", projectile_type=/obj/item/projectile/beam/stun, modifystate="energystun", item_modifystate="stun", fire_sound='sound/weapons/Taser.ogg', icon="stun"),
-		list(mode_name="kill", projectile_type=/obj/item/projectile/beam, modifystate="energykill", item_modifystate="kill", fire_sound='sound/weapons/Laser.ogg', icon="kill"),
+		STUNBOLT,
+		LETHAL,
 		WEAPON_CHARGE,
 		)
 
@@ -45,6 +45,13 @@
 	modifystate = null
 	suitable_cell = /obj/item/cell/small
 	cell_type = /obj/item/cell/small
+
+/obj/item/gun/energy/gun/martin/preloaded
+
+/obj/item/gun/energy/gun/martin/preloaded/New()
+	cell = new /obj/item/cell/small/high(src)
+	. = ..()
+	update_icon()
 
 /obj/item/gun/energy/gun/martin/proc/update_mode()
 	var/datum/firemode/current_mode = firemodes[sel_mode]
@@ -74,7 +81,7 @@
 	matter = list(MATERIAL_PLASTEEL = 4, MATERIAL_WOOD = 4, MATERIAL_SILVER = 2)
 	price_tag = 150
 	init_firemodes = list(
-		WEAPON_NORMAL,
+		LETHAL,
  		WEAPON_CHARGE
 	)
 	twohanded = FALSE

@@ -286,6 +286,8 @@
 		T.use_power_cost *= tool_upgrades[UPGRADE_POWERCOST_MULT]
 	if(tool_upgrades[UPGRADE_BULK])
 		T.extra_bulk += tool_upgrades[UPGRADE_BULK]
+	if(tool_upgrades[UPGRADE_BULK])
+		T.extra_bulk += tool_upgrades[UPGRADE_BULK]
 	if(tool_upgrades[UPGRADE_HEALTH_THRESHOLD])
 		T.health_threshold += tool_upgrades[UPGRADE_HEALTH_THRESHOLD]
 	if(tool_upgrades[UPGRADE_MAXFUEL])

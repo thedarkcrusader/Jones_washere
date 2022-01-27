@@ -34,7 +34,9 @@
 	var/penetration_multiplier = 1 //Multiplies armor penetration of projectiles fired from this gun
 	var/pierce_multiplier = 0 //ADDITIVE wall penetration to projectiles fired from this gun
 	var/extra_damage_mult_scoped = 0 //Adds even more damage mulitplier, when scopped so snipers can sniper
-	var/burst = 1
+	var/proj_agony_multiplier = 1
+
+
 	var/fire_delay = 6 	//delay after shooting before the gun can be used again
 	var/burst_delay = 2	//delay between shots, if firing in bursts
 	var/move_delay = 1
@@ -86,6 +88,10 @@
 
 	var/eject_animatio = FALSE //Only currenly in bolt guns. Check boltgun.dm for more information on this
 	var/fire_animatio = FALSE //Only used in revolvers atm, animation for each shot being fired
+
+	var/darkness_view = 0
+	var/vision_flags = 0
+	var/see_invisible_gun = -1
 
 	var/pumpshotgun_sound = 'sound/weapons/shotgunpump.ogg'
 
@@ -213,19 +219,20 @@
 		handle_click_empty(user)
 		return FALSE
 
-	if((CLUMSY in M.mutations) && prob(40)) //Clumsy handling
+	if((CLUMSY in M.mutations) && prob(15))
 		var/obj/P = consume_next_projectile()
 		if(P)
 			if(process_projectile(P, user, user, pick(BP_L_LEG, BP_R_LEG)))
 				handle_post_fire(user, user)
 				user.visible_message(
-					SPAN_DANGER("\The [user] shoots \himself in the foot with \the [src]!"),
-					SPAN_DANGER("You shoot yourself in the foot with \the [src]!")
+					SPAN_DANGER("\The [user] fumbles with \the [src] and shoot themselves in the foot with \the [src]!"),
+					SPAN_DANGER("You fumble with the gun and accidentally shoot yourself in the foot with \the [src]!")
 					)
 				M.drop_item()
 		else
 			handle_click_empty(user)
 		return FALSE
+
 	if(rigged)
 		var/obj/P = consume_next_projectile()
 		if(P)
@@ -316,11 +323,13 @@
 
 		projectile.multiply_projectile_damage(damage_multiplier)
 
-		projectile.multiply_projectile_penetration(penetration_multiplier + (user.stats.getStat(STAT_VIG) * 0.05))
+		projectile.multiply_projectile_penetration(penetration_multiplier + user.stats.getStat(STAT_VIG) * 0.02)
 
 		projectile.multiply_pierce_penetration(pierce_multiplier)
 
 		projectile.multiply_projectile_step_delay(proj_step_multiplier)
+
+		projectile.multiply_projectile_agony(proj_agony_multiplier)
 
 		if(istype(projectile, /obj/item/projectile))
 			var/obj/item/projectile/P = projectile
@@ -357,7 +366,21 @@
 	user.set_move_cooldown(move_delay)
 	if(!twohanded && user.stats.getPerk(PERK_GUNSLINGER))
 		next_fire_time = world.time + fire_delay - fire_delay * 0.33
-	else
+
+	if((CLUMSY in user.mutations) && prob(40)) //Clumsy handling
+		var/obj/P = consume_next_projectile()
+		if(P)
+			if(process_projectile(P, user, user, pick(BP_L_LEG, BP_R_LEG)))
+				handle_post_fire(user, user)
+				user.visible_message(
+					SPAN_DANGER("\The [user] shoots \himself in the foot with \the [src]!"),
+					SPAN_DANGER("You shoot yourself in the foot with \the [src]!")
+					)
+				user.drop_item()
+		else
+			handle_click_empty(user)
+		return FALSE
+
 		next_fire_time = world.time + fire_delay
 
 	if(muzzle_flash)
@@ -386,6 +409,8 @@
 
 //called after successfully firing
 /obj/item/gun/proc/handle_post_fire(mob/living/user, atom/target, var/pointblank=0, var/reflex=0)
+	SEND_SIGNAL(src, COMSIG_GUN_POST_FIRE, target, pointblank, reflex)
+	//The sound we play
 	if(silenced)
 		//Silenced shots have a lower range and volume
 		playsound(user, fire_sound_silenced, 15, 1, -3)
@@ -408,10 +433,9 @@
 		if(muzzle_flash)
 			set_light(muzzle_flash)
 
+	//Now we tell are user that one handing is a bad idea, even if its cooler
 	if(one_hand_penalty)
-		if(!wielded)
-			if(user.stats.getPerk(PERK_PERFECT_SHOT))
-				return
+		if(!wielded && !user.stats.getPerk(PERK_PERFECT_SHOT))
 			switch(one_hand_penalty)
 				if(1)
 					if(prob(50)) //don't need to tell them every single time
@@ -434,7 +458,7 @@
 		return //dual wielding deal too much damage as it is, so no point blank for it
 
 	//default point blank multiplier
-	var/damage_mult = 1.3
+	var/damage_mult = 1.1
 
 	//determine multiplier due to the target being grabbed
 	if(ismob(target))
@@ -444,9 +468,9 @@
 			for(var/obj/item/grab/G in M.grabbed_by)
 				grabstate = max(grabstate, G.state)
 			if(grabstate >= GRAB_NECK)
-				damage_mult = 2.5
+				damage_mult = 1.75
 			else if(grabstate >= GRAB_AGGRESSIVE)
-				damage_mult = 1.5
+				damage_mult = 1.3
 		P.multiply_projectile_damage(damage_mult)
 
 
@@ -600,6 +624,16 @@
 		sel_mode = 1
 	return set_firemode(sel_mode)
 
+/// Set firemode , but without a refresh_upgrades at the start
+/obj/item/gun/proc/very_unsafe_set_firemode(index)
+	if(index > firemodes.len)
+		index = 1
+	var/datum/firemode/new_mode = firemodes[sel_mode]
+	new_mode.apply_to(src)
+	new_mode.update()
+	update_hud_actions()
+	return new_mode
+
 /obj/item/gun/proc/set_firemode(var/index)
 	refresh_upgrades()
 	if(index > firemodes.len)
@@ -638,6 +672,11 @@
 	else
 		user.update_cursor()
 
+/obj/item/gun/proc/get_total_damage_adjust()
+	var/val = 0
+	for(var/i in proj_damage_adjust)
+		val += proj_damage_adjust[i]
+	return val
 
 //Finds the current firemode and calls update on it. This is called from a few places:
 //When firemode is changed
@@ -742,20 +781,30 @@
 	data["recoil_buildup_max"] = initial(recoil_buildup)*10
 
 	data["extra_volume"] = extra_bulk
+  
+	data["upgrades_max"] = max_upgrades
+
+	data += ui_data_projectile(get_dud_projectile())
 
 	if(firemodes.len)
 		var/list/firemodes_info = list()
 		for(var/i = 1 to firemodes.len)
 			data["firemode_count"] += 1
 			var/datum/firemode/F = firemodes[i]
-			firemodes_info += list(list(
+			var/list/firemode_info = list(
 				"index" = i,
 				"current" = (i == sel_mode),
 				"name" = F.name,
+				"desc" = F.desc,
 				"burst" = F.settings["burst"],
 				"fire_delay" = F.settings["fire_delay"],
 				"move_delay" = F.settings["move_delay"],
-				))
+				)
+			if(F.settings["projectile_type"])
+				var/proj_path = F.settings["projectile_type"]
+				var/list/proj_data = ui_data_projectile(new proj_path)
+				firemode_info += proj_data
+			firemodes_info += list(firemode_info)
 		data["firemode_info"] = firemodes_info
 
 	if(item_upgrades.len)
@@ -774,12 +823,27 @@
 		set_firemode(sel_mode)
 		return 1
 
+//Returns a projectile that's not for active usage.
+/obj/item/gun/proc/get_dud_projectile()
+	return null
+
+/obj/item/gun/proc/ui_data_projectile(var/obj/item/projectile/P)
+	if(!P)
+		return list()
+	var/list/data = list()
+	data["projectile_name"] = P.name
+	data["projectile_damage"] = (P.get_total_damage() * damage_multiplier) + get_total_damage_adjust()
+	data["projectile_AP"] = P.armor_penetration * penetration_multiplier
+	qdel(P)
+	return data
+
 /obj/item/gun/refresh_upgrades()
 	//First of all, lets reset any var that could possibly be altered by an upgrade
 	damage_multiplier = initial(damage_multiplier)
 	penetration_multiplier = initial(penetration_multiplier)
 	pierce_multiplier = initial(pierce_multiplier)
 	proj_step_multiplier = initial(proj_step_multiplier)
+	proj_agony_multiplier = initial(proj_agony_multiplier)
 	fire_delay = initial(fire_delay)
 	move_delay = initial(move_delay)
 	recoil_buildup = initial(recoil_buildup)
@@ -789,18 +853,40 @@
 	init_offset = initial(init_offset)
 	proj_damage_adjust = list()
 	fire_sound = initial(fire_sound)
+	restrict_safety = initial(restrict_safety)
+	dna_compare_samples = initial(dna_compare_samples)
 	rigged = initial(rigged)
 	zoom_factor = initial(zoom_factor)
+	darkness_view = initial(darkness_view)
+	vision_flags = initial(vision_flags)
+	see_invisible_gun = initial(see_invisible_gun)
 	force = initial(force)
-	auto_eject = initial(auto_eject)
-	dna_compare_samples = initial(dna_compare_samples)
+	armor_penetration = initial(armor_penetration)
+	sharp = initial(sharp)
+	attack_verb = list()
+	one_hand_penalty = initial(one_hand_penalty)
+	auto_eject = initial(auto_eject) //SoJ edit
 	initialize_scope()
 	initialize_firemodes()
+
+	//Lets get are prefixes and name fresh
+	name = initial(name)
+	max_upgrades = initial(max_upgrades)
+	color = initial(color)
+	prefixes = list()
+	item_flags = initial(item_flags)
+
 	extra_bulk = initial(extra_bulk)
 
 	//Now lets have each upgrade reapply its modifications
 	SEND_SIGNAL(src, COMSIG_ADDVAL, src)
 	SEND_SIGNAL(src, COMSIG_APPVAL, src)
+
+	if(firemodes.len)
+		very_unsafe_set_firemode(sel_mode) // Reset the firemode so it gets the new changes
+
+	for (var/prefix in prefixes)
+		name = "[prefix] [name]"
 
 	update_icon()
 	//then update any UIs with the new stats
@@ -820,6 +906,20 @@
 		if(folding_stock)
 			fold(span_chat = FALSE) //If we have a stock lets not remove all are boons cuz we looked down a scope
 */
+
+/obj/item/gun/zoom(tileoffset, viewsize)
+	..()
+	if(!ishuman(usr))
+		return
+	var/mob/living/carbon/human/H = usr
+	if(zoom)
+		H.using_scope = src
+		damage_multiplier += extra_damage_mult_scoped
+	else
+		H.using_scope = null
+		refresh_upgrades()
+		if(folding_stock)
+			fold(span_chat = FALSE) //If we have a stock lets not remove all are boons cuz we looked down a scope
 
 /* //Eris has this but it, unsurpriingly, has issues, just gonna comment it out for now incase I use the code for something else later.
 /obj/item/gun/proc/generate_guntags()
