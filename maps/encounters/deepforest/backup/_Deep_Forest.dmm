@@ -45,7 +45,7 @@
 /turf/simulated/floor/tiled/derelict/red_white_edges,
 /area/nadezhda/outside/one_star)
 "am" = (
-/mob/living/simple_animal/hostile/voidwolf/ranged,
+/mob/living/carbon/superior_animal/human/voidwolf/ranged,
 /turf/simulated/floor/wood/wild5,
 /area/nadezhda/outside/meadow)
 "an" = (
@@ -279,7 +279,7 @@
 /area/nadezhda/outside/meadow)
 "bi" = (
 /obj/structure/catwalk,
-/mob/living/simple_animal/hostile/voidwolf/captain,
+/mob/living/carbon/superior_animal/human/voidwolf/captain,
 /turf/simulated/floor/plating/under,
 /area/nadezhda/dungeon/outside/smuggler_zone_u)
 "bj" = (
@@ -880,7 +880,7 @@
 /area/nadezhda/dungeon/outside/smuggler_zone_u)
 "dv" = (
 /obj/structure/catwalk,
-/mob/living/simple_animal/hostile/voidwolf{
+/mob/living/carbon/superior_animal/human/voidwolf{
 	health = 250;
 	melee_damage_upper = 40;
 	move_speed = 12;
@@ -1129,7 +1129,7 @@
 /area/nadezhda/dungeon/outside/smuggler_zone_u)
 "ev" = (
 /obj/machinery/light/small,
-/mob/living/simple_animal/hostile/voidwolf{
+/mob/living/carbon/superior_animal/human/voidwolf{
 	health = 250;
 	melee_damage_upper = 40;
 	move_speed = 12;
@@ -1692,7 +1692,7 @@
 /turf/simulated/mineral/planet,
 /area/asteroid/rogue)
 "gv" = (
-/mob/living/simple_animal/hostile/voidwolf/captain,
+/mob/living/carbon/superior_animal/human/voidwolf/captain,
 /turf/simulated/floor/carpet/turcarpet,
 /area/nadezhda/dungeon/outside/smuggler_zone)
 "gw" = (
@@ -5713,7 +5713,7 @@
 /turf/simulated/floor/wood,
 /area/nadezhda/dungeon/outside/smuggler_zone)
 "uG" = (
-/mob/living/simple_animal/hostile/voidwolf,
+/mob/living/carbon/superior_animal/human/voidwolf,
 /turf/simulated/floor/asteroid/grass,
 /area/nadezhda/outside/meadow)
 "uH" = (
@@ -6652,7 +6652,7 @@
 /turf/simulated/floor/wood/wild5,
 /area/nadezhda/dungeon/outside/smuggler_zone)
 "xL" = (
-/mob/living/simple_animal/hostile/voidwolf,
+/mob/living/carbon/superior_animal/human/voidwolf,
 /turf/simulated/floor/asteroid/dirt,
 /area/nadezhda/outside/meadow)
 "xM" = (
@@ -9716,11 +9716,11 @@
 /turf/simulated/floor/wood/wild5,
 /area/nadezhda/dungeon/outside/smuggler_zone_u)
 "JQ" = (
-/mob/living/simple_animal/hostile/voidwolf/fieldtech,
+/mob/living/carbon/superior_animal/human/voidwolf/fieldtech,
 /turf/simulated/floor/wood/wild5,
 /area/nadezhda/dungeon/outside/smuggler_zone_u)
 "JR" = (
-/mob/living/simple_animal/hostile/voidwolf/fieldtech/ranged,
+/mob/living/carbon/superior_animal/human/voidwolf/fieldtech/ranged,
 /turf/simulated/floor/wood/wild5,
 /area/nadezhda/dungeon/outside/smuggler_zone_u)
 "JS" = (
@@ -10538,7 +10538,7 @@
 /area/nadezhda/outside/one_star)
 "Ny" = (
 /obj/structure/bed/chair/comfy,
-/mob/living/simple_animal/hostile/voidwolf/captain,
+/mob/living/carbon/superior_animal/human/voidwolf/captain,
 /turf/simulated/floor/wood/wild3,
 /area/nadezhda/dungeon/outside/smuggler_zone_u)
 "Nz" = (
@@ -10560,7 +10560,7 @@
 /turf/simulated/floor/tiled/dark/monofloor,
 /area/nadezhda/dungeon/outside/prepper)
 "NC" = (
-/mob/living/simple_animal/hostile/voidwolf/aerotrooper,
+/mob/living/carbon/superior_animal/human/voidwolf/aerotrooper,
 /turf/simulated/floor/wood/wild3,
 /area/nadezhda/dungeon/outside/smuggler_zone_u)
 "NG" = (
@@ -10797,7 +10797,7 @@
 /turf/simulated/floor/tiled/derelict,
 /area/nadezhda/outside/one_star)
 "PC" = (
-/mob/living/simple_animal/hostile/voidwolf{
+/mob/living/carbon/superior_animal/human/voidwolf{
 	health = 250;
 	melee_damage_upper = 40;
 	move_speed = 12;
@@ -11384,7 +11384,7 @@
 /turf/simulated/floor/wood/wild5,
 /area/nadezhda/dungeon/outside/smuggler_zone_u)
 "Ts" = (
-/mob/living/simple_animal/hostile/voidwolf{
+/mob/living/carbon/superior_animal/human/voidwolf{
 	health = 250;
 	melee_damage_upper = 40;
 	move_speed = 12;
