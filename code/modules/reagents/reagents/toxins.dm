@@ -820,10 +820,10 @@
         message = SPAN_WARNING("YOUR EYES ARE BURNING!!")
         if(mouth_covered)
             M.eye_blurry = max(M.eye_blurry, 15)
-            M.make_dizzy(6 * effect_multiplier)
+            M.make_dizzy(500)
         else
             M.eye_blurry = max(M.eye_blurry, 25)
-            M.make_dizzy(12 * effect_multiplier)
+            M.make_dizzy(1000)
 
     if(mouth_covered)
         if(!message)
